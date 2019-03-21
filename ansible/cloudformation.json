@@ -1,0 +1,739 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "e4551370-0f11-415c-9194-3f4f731860b0": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 240,
+          "y": 270
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "1c3b5195-93af-499a-b113-092a5c1261ab",
+          "dc9e8651-b166-46ad-b42e-21ee7f1f9da0"
+        ],
+        "iscontainedinside": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ]
+      },
+      "b6da99db-ad35-46fa-8851-ea2173682606": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 180,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "6a0ec575-63c8-4e5d-a770-4f5619ed10ec",
+          "dc9e8651-b166-46ad-b42e-21ee7f1f9da0"
+        ],
+        "iscontainedinside": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ]
+      },
+      "a826faae-26a0-48cb-a68f-dd3c6006c70b": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 180,
+          "y": 390
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "c41294ca-0b59-4cff-bcb8-792556de91d4",
+          "dc9e8651-b166-46ad-b42e-21ee7f1f9da0"
+        ],
+        "iscontainedinside": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ]
+      },
+      "0a3acd21-73a9-4185-a5dd-7aa9ba232876": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 120,
+          "y": 270
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "1c3b5195-93af-499a-b113-092a5c1261ab",
+          "dc9e8651-b166-46ad-b42e-21ee7f1f9da0"
+        ],
+        "iscontainedinside": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ]
+      },
+      "39ba338b-c8d8-4452-9fd5-0e2e57fa3710": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 510,
+          "y": 320
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "1c3b5195-93af-499a-b113-092a5c1261ab": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 510,
+          "y": 220
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "c41294ca-0b59-4cff-bcb8-792556de91d4": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 510,
+          "y": 390
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "6a0ec575-63c8-4e5d-a770-4f5619ed10ec": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 510,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "f2aab201-1a1d-46a1-8f00-f53b70c3d7ec": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 180,
+          "y": 480
+        },
+        "z": 1,
+        "embeds": [],
+        "iscontainedinside": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ],
+        "dependson": [
+          "06142e2d-249e-4c6c-82a7-d02cc774c71f"
+        ]
+      },
+      "f295945a-6cc4-46cd-9404-0c81c6270259": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 180,
+          "y": 550
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "dc9e8651-b166-46ad-b42e-21ee7f1f9da0": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 420,
+          "y": 320
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "d5b8ab85-7baf-487e-a038-cda95cd54ea8": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 10,
+          "y": 390
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "a826faae-26a0-48cb-a68f-dd3c6006c70b"
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "SubnetId": {
+      "Type": "String"
+    },
+    "GameEngineSecurityGroup": {
+      "Type": "String"
+    },
+    "TeamName": {
+      "Type": "String"
+    },
+    "TeamPassword": {
+      "Type": "String"
+    },
+    "SSHKeyName": {
+      "Type": "String"
+    },
+    "BuildIPAllocationId": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "User": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "UserName": {
+          "Ref": "TeamName"
+        },
+        "LoginProfile": {
+          "Password": {
+            "Ref": "TeamPassword"
+          },
+          "PasswordResetRequired": true
+        },
+        "Policies": [
+          {
+            "PolicyName": "TeamPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "cloud9:DescribeEnvironmentMemberships"
+                  ],
+                  "Resource": "*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ec2:DescribeInstances"
+                  ],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f295945a-6cc4-46cd-9404-0c81c6270259"
+        }
+      }
+    },
+    "IDE": {
+      "Type": "AWS::Cloud9::EnvironmentEC2",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "Name": {
+          "Ref": "TeamName"
+        },
+        "SubnetId": {
+          "Ref": "SubnetId"
+        },
+        "OwnerArn": {
+          "Fn::GetAtt": [
+            "User",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f2aab201-1a1d-46a1-8f00-f53b70c3d7ec"
+        }
+      }
+    },
+    "Build": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t2.medium",
+        "ImageId": "ami-00035f41c82244dab",
+        "KeyName": {
+          "Ref": "SSHKeyName"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SSHSecurityGroup"
+          },
+          {
+            "Ref": "BuildSecurityGroup"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Build"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "build"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "a826faae-26a0-48cb-a68f-dd3c6006c70b"
+        }
+      }
+    },
+    "Node1": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "ImageId": "ami-00035f41c82244dab",
+        "KeyName": {
+          "Ref": "SSHKeyName"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SSHSecurityGroup"
+          },
+          {
+            "Ref": "NodeOpenedSecurityGroup"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Node 1"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "node1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "0a3acd21-73a9-4185-a5dd-7aa9ba232876"
+        }
+      }
+    },
+    "Node2": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "ImageId": "ami-00035f41c82244dab",
+        "KeyName": {
+          "Ref": "SSHKeyName"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SSHSecurityGroup"
+          },
+          {
+            "Ref": "NodeOpenedSecurityGroup"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Node 2"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "node2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "e4551370-0f11-415c-9194-3f4f731860b0"
+        }
+      }
+    },
+    "LoadBalancer": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "ImageId": "ami-00035f41c82244dab",
+        "KeyName": {
+          "Ref": "SSHKeyName"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SSHSecurityGroup"
+          },
+          {
+            "Ref": "LoadBalancerSecurityGroup"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Load Balancer"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "loadbalancer"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b6da99db-ad35-46fa-8851-ea2173682606"
+        }
+      }
+    },
+    "BuildIP": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "AllocationId": { "Ref":  "BuildIPAllocationId"},
+        "InstanceId": { "Ref":  "Build" }
+      }
+    },
+    "SSHSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "SSHSecurityGroup",
+        "SecurityGroupIngress": [
+          {
+            "Description": "SSH",
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "SSH Security Group"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "ssh"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc9e8651-b166-46ad-b42e-21ee7f1f9da0"
+        }
+      }
+    },
+    "BuildSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "BuildSecurityGroup",
+        "SecurityGroupIngress": [
+          {
+            "Description": "Jenkins",
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080
+          },
+          {
+            "Description": "HTTP",
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "Description": "Sonar",
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 9000,
+            "ToPort": 9000
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Build Security Group"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "build"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "c41294ca-0b59-4cff-bcb8-792556de91d4"
+        }
+      }
+    },
+    "NodeOpenedSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "NodeOpenedSecurityGroup",
+        "SecurityGroupIngress": [
+          {
+            "Description": "HTTP",
+            "CidrIp": {
+              "Fn::Join": [
+                "/",
+                [
+                  {
+                    "Fn::GetAtt": [
+                      "LoadBalancer",
+                      "PrivateIp"
+                    ]
+                  },
+                  "32"
+                ]
+              ]
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Node Opened Security Group"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "nodeopened"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "1c3b5195-93af-499a-b113-092a5c1261ab"
+        }
+      }
+    },
+    "NodeClosedSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "NodeClosedSecurityGroup",
+        "SecurityGroupIngress": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Node Closed Security Group"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "nodeclosed"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "39ba338b-c8d8-4452-9fd5-0e2e57fa3710"
+        }
+      }
+    },
+    "LoadBalancerSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "LoadBalancerSecurityGroup",
+        "SecurityGroupIngress": [
+          {
+            "Description": "HTTP",
+            "SourceSecurityGroupId": {
+              "Ref": "GameEngineSecurityGroup"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "Description": "HTTPS",
+            "SourceSecurityGroupId": {
+              "Ref": "GameEngineSecurityGroup"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                " - ",
+                [
+                  {
+                    "Ref": "TeamName"
+                  },
+                  "Load Balancer Security Group"
+                ]
+              ]
+            }
+          },
+          {
+            "Key": "team",
+            "Value": {
+              "Ref": "TeamName"
+            }
+          },
+          {
+            "Key": "usage",
+            "Value": "loadbalancer"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6a0ec575-63c8-4e5d-a770-4f5619ed10ec"
+        }
+      }
+    }
+  }
+}

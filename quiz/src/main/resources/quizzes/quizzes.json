@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "5wg3gpt9pblxva02i53yd7h1tfxe96k4srdemcd1e44z4vrd",
+    "title": "Security in CI/CD",
+    "description": "This is to test your knowledge about security in CI/CD. If you succeed, you will get a bonus flag worth 1 point of Dev, 1 point of Sec and 2 points of Ops. If you're afraid, go check out these nice presentations beforehand... Good luck!",
+    "links": [
+      "https://info.ageofdevsecops.com/pdf/zenbox-secdevops.pdf",
+      "https://info.ageofdevsecops.com/pdf/shifting-security-to-the-left.pdf"
+    ],
+    "questions": [
+      {
+        "label": "Which vulnerability is the most commonly found on the web according to the OWASP top 10?",
+        "choices": [
+          {
+            "label": "Sensitive Data Exposure",
+            "isCorrect": false
+          },
+          {
+            "label": "Injections (SQL, LDAP...)",
+            "isCorrect": true
+          },
+          {
+            "label": "Insecure Deserialization",
+            "isCorrect": false
+          },
+          {
+            "label": "Broken Access Control",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which tools can be used to check vulnerable dependencies?",
+        "choices": [
+          {
+            "label": "OWASP dependency-check",
+            "isCorrect": true
+          },
+          {
+            "label": "OWASP vulnerability-checker",
+            "isCorrect": false
+          },
+          {
+            "label": "npm audit",
+            "isCorrect": true
+          },
+          {
+            "label": "GitHub",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which tools can be used to perform a static source code analysis?",
+        "choices": [
+          {
+            "label": "OWASP dependency-check",
+            "isCorrect": false
+          },
+          {
+            "label": "SonarQube",
+            "isCorrect": true
+          },
+          {
+            "label": "OWASP vulnerability-checker",
+            "isCorrect": false
+          },
+          {
+            "label": "npm audit",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "How can you protect your database regarding access control and data confidentiality?",
+        "choices": [
+          {
+            "label": "Enable database authentication",
+            "isCorrect": true
+          },
+          {
+            "label": "Activate the fully-automated RGPD module",
+            "isCorrect": false
+          },
+          {
+            "label": "Use docker volumes",
+            "isCorrect": false
+          },
+          {
+            "label": "Encrypt the data",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What does the HTTP header \"Content-Security-Policy\" do?",
+        "choices": [
+          {
+            "label": "It enables authentication on the server side",
+            "isCorrect": false
+          },
+          {
+            "label": "It does not work in Internet Explorer (use \"X-Content-Security-Policy\")",
+            "isCorrect": true
+          },
+          {
+            "label": "It restricts domains authorized to load content",
+            "isCorrect": true
+          },
+          {
+            "label": "It secures data transfers using SSL",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does the HTTP header \"X-Frame-Options\" do?",
+        "choices": [
+          {
+            "label": "It loads the page in a frame with the given options",
+            "isCorrect": false
+          },
+          {
+            "label": "It specifies if the browser can load content in a frame/iframe",
+            "isCorrect": true
+          },
+          {
+            "label": "It does not work in Internet Explorer (use \"Frame-Options\")",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an alias for \"Content-Security-Policy\"",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does the HTTP header \"Strict-Transport-Security\" (aka HSTS) do?",
+        "choices": [
+          {
+            "label": "It forces the browser to reach the website in HTTPS",
+            "isCorrect": true
+          },
+          {
+            "label": "It checks that all routers between the client and the server are secured",
+            "isCorrect": false
+          },
+          {
+            "label": "It does not work in Internet Explorer (use \"X-HSTS-Strict\")",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an alias for \"Content-Security-Policy\"",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does \"AAA\" mean?",
+        "choices": [
+          {
+            "label": "Ability to Activate Authentication (for a web server)",
+            "isCorrect": false
+          },
+          {
+            "label": "Attacks Authorized on Authentication (for a cloud provider)",
+            "isCorrect": false
+          },
+          {
+            "label": "Against All Authority",
+            "isCorrect": false
+          },
+          {
+            "label": "Authentication, Authorization and Accounting",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which tool can be used to store and handle access to secrets?",
+        "choices": [
+          {
+            "label": "Hashicorp Vault",
+            "isCorrect": true
+          },
+          {
+            "label": "AWS Secrets Manager",
+            "isCorrect": true
+          },
+          {
+            "label": "GNU Vault",
+            "isCorrect": false
+          },
+          {
+            "label": "Windows Secrets Manager",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which tool can be used to automate some types of penetration tests?",
+        "choices": [
+          {
+            "label": "OWASP pentest-check",
+            "isCorrect": false
+          },
+          {
+            "label": "OWASP penetration-test",
+            "isCorrect": false
+          },
+          {
+            "label": "OWASP Zed Attack Proxy (ZAP)",
+            "isCorrect": true
+          },
+          {
+            "label": "OWASP Against All Authority (AAA)",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "It seems like you know quite a lot about security in CI/CD! Here is your flag: QUIZ_SECURITYCICD_DEV1_SEC1_OPS2_p093x471u76mfrsfpo8jbvrdfbaf05pfv4oyzl6zy2b4za9f"
+  },
+  {
+    "id": "qppkswx97y6z627x4h962yk8n8mg8nd6n989s6c479z7t35p",
+    "title": "Resiliency",
+    "description": "We say that a system is resilient when it gracefully handles errors and can recover from failures. How much do you know about resiliency? If you succeed, you will get a bonus flag worth 1 point of Dev and 3 points of Ops. If you need some help, you can start with this documentation. Good luck!",
+    "links": [
+      "https://docs.microsoft.com/en-us/azure/architecture/patterns/category/resiliency",
+      "https://docs.microsoft.com/en-us/azure/architecture/resiliency/",
+      "http://blog.itaysk.com/2017/11/20/deployment-strategies-defined"
+    ],
+    "questions": [
+      {
+        "label": "What is the Retry pattern?",
+        "choices": [
+          {
+            "label": "It is a DevOps practice in which the team develops and releases quickly, and tries multiple solutions until it works",
+            "isCorrect": false
+          },
+          {
+            "label": "It corresponds to the nesting of two \"try/catch\" blocks to catch exceptions raised by a \"finally\" block",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an implementation technique in which remote services calls are retried multiple times to work around temporary unavailability",
+            "isCorrect": true
+          },
+          {
+            "label": "It is the same as the Bulkhead pattern",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the Circuit Breaker pattern?",
+        "choices": [
+          {
+            "label": "It is an Agile practice in which a team does not follow traditional validation processes and talk directly with people in another team",
+            "isCorrect": false
+          },
+          {
+            "label": "It corresponds to the use of a \"break\" statement in deeply nested \"for\" loops",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an implementation technique in which remote service calls are skipped when recent calls to the same service failed",
+            "isCorrect": true
+          },
+          {
+            "label": "It is the same as the Bulkhead pattern",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In the Circuit Breaker pattern, what are the possible states of the circuit breaker?",
+        "choices": [
+          {
+            "label": "Open",
+            "isCorrect": true
+          },
+          {
+            "label": "Closed",
+            "isCorrect": true
+          },
+          {
+            "label": "Half-open",
+            "isCorrect": true
+          },
+          {
+            "label": "Round-robin",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "When is a Circuit Breaker better than a Retry pattern?",
+        "choices": [
+          {
+            "label": "When remote service failures are known to be temporary",
+            "isCorrect": false
+          },
+          {
+            "label": "When remote service failure are known to be long-lasting",
+            "isCorrect": true
+          },
+          {
+            "label": "Always: Circuit Breaker is a more advanced version of Retry",
+            "isCorrect": false
+          },
+          {
+            "label": "Never: Retry is a more advanced version of Circuit Breaker",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the Queue-based Load Leveling pattern?",
+        "choices": [
+          {
+            "label": "It is a Kanban practice in which a team uses a continuous queue of user stories instead of sprints to smoothen delivery over time",
+            "isCorrect": false
+          },
+          {
+            "label": "It corresponds to the use of thread-safe queue to transfer data from multiple callers to a single callee in a multi-threaded environment",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an implementation technique in which a queue is used as an intermediate between callers with variable loads and callees handling requests at a fixed rate",
+            "isCorrect": true
+          },
+          {
+            "label": "It is the same as the Bulkhead pattern",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What are the differences between a Rolling update and a Blue/Green deployment?",
+        "choices": [
+          {
+            "label": "Blue/Green progressively applies the update to the target instances, whereas Rolling Update requires a spare environment to deploy the new version and an ability to switch between the two environments",
+            "isCorrect": false
+          },
+          {
+            "label": "Rolling Update progressively applies the update to the target instances, whereas Blue/Green requires a spare environment to deploy the new version and an ability to switch between the two environments",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Blue/Green deployment is used to:",
+        "choices": [
+          {
+            "label": "Release to production with no downtime nor service interruption",
+            "isCorrect": true
+          },
+          {
+            "label": "Rollback the production environment to an earlier version",
+            "isCorrect": false
+          },
+          {
+            "label": "Release a new feature to a small fraction of the users to get feedback",
+            "isCorrect": false
+          },
+          {
+            "label": "Be more energy-efficient during deployment to preserve the environment",
+            "isCorrect": false
+          },
+          {
+            "label": "Have more time to deploy to production because users are not impacted",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What tools or techniques can improve the resiliency of a service?",
+        "choices": [
+          {
+            "label": "Load balancing between multiple instances with healthchecks and timeouts",
+            "isCorrect": true
+          },
+          {
+            "label": "Detailed logging (INFO or TRACE level) and monitoring",
+            "isCorrect": false
+          },
+          {
+            "label": "Kanban",
+            "isCorrect": false
+          },
+          {
+            "label": "Apply patterns such as Retry and Circuit Breaker in the code",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is the expected maximum downtime (per week) of a service with 99.9% availability?",
+        "choices": [
+          {
+            "label": "<1 second",
+            "isCorrect": false
+          },
+          {
+            "label": "10 seconds",
+            "isCorrect": false
+          },
+          {
+            "label": "10 minutes",
+            "isCorrect": true
+          },
+          {
+            "label": "10 hours",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the expected maximum downtime (per week) of a setup with 2 instances of a service with 99.9% availability behind a load balancer (assuming that the load balancer itself is 100% available)?",
+        "choices": [
+          {
+            "label": "<1 second",
+            "isCorrect": true
+          },
+          {
+            "label": "10 seconds",
+            "isCorrect": false
+          },
+          {
+            "label": "10 minutes",
+            "isCorrect": false
+          },
+          {
+            "label": "10 hours",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Well done! I hope you apply these techniques every day! Here is your flag: QUIZ_RESILIENCY_DEV1_SEC0_OPS3_7YcKz7zTYtb66LP6385sy5dx4auQWgS9yd9dC2LCK7H4FmX6"
+  },
+  {
+    "id": "znukzl33f8h7c53o9zhd18ce9cztbnkg04r5f0zkymxghqvh",
+    "title": "Docker",
+    "description": "Have you heard about Docker? Let's prove it! If you are successful, we will give you a flag worth 1 point of Dev and 2 points of Ops. Don't hesitate to read a bit first... Let's go!",
+    "links": [
+      "https://docs.docker.com/get-started/",
+      "https://www.youtube.com/watch?v=Q5POuMHxW-0",
+      "https://info.ageofdevsecops.com/pdf/docker101.pdf"
+    ],
+    "questions": [
+      {
+        "label": "What is Docker?",
+        "choices": [
+          {
+            "label": "A tool to run virtual machines",
+            "isCorrect": false
+          },
+          {
+            "label": "Only a container runtime",
+            "isCorrect": false
+          },
+          {
+            "label": "The name of an enterprise",
+            "isCorrect": true
+          },
+          {
+            "label": "One of the main cloud providers alongside AWS, Azure and GCP",
+            "isCorrect": false
+          },
+          {
+            "label": "A set of tools to build, ship and run applications",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "On what OS can we run Docker out of the box?",
+        "choices": [
+          {
+            "label": "Windows",
+            "isCorrect": true
+          },
+          {
+            "label": "MacOS",
+            "isCorrect": true
+          },
+          {
+            "label": "Linux",
+            "isCorrect": true
+          },
+          {
+            "label": "Android",
+            "isCorrect": false
+          },
+          {
+            "label": "iOS",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What program/tools belong to the Docker ecosystem?",
+        "choices": [
+          {
+            "label": "RunC",
+            "isCorrect": true
+          },
+          {
+            "label": "CRI-O",
+            "isCorrect": false
+          },
+          {
+            "label": "Swarm",
+            "isCorrect": true
+          },
+          {
+            "label": "VirtualBox",
+            "isCorrect": false
+          },
+          {
+            "label": "Docker Compose",
+            "isCorrect": true
+          },
+          {
+            "label": "Moby",
+            "isCorrect": true
+          },
+          {
+            "label": "Kubernetes",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What kind of software can I run in a container without any hack?",
+        "choices": [
+          {
+            "label": "An Nginx load balancer",
+            "isCorrect": true
+          },
+          {
+            "label": "A Spring Boot (Java) micro-service running in its own JVM",
+            "isCorrect": true
+          },
+          {
+            "label": "An Oracle database",
+            "isCorrect": true
+          },
+          {
+            "label": "A Kafka cluster",
+            "isCorrect": true
+          },
+          {
+            "label": "Adobe Photoshop",
+            "isCorrect": false
+          },
+          {
+            "label": "An Hadoop cluster",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What docker command can be used to download an image and run it in a container?",
+        "choices": [
+          {
+            "label": "docker start",
+            "isCorrect": false
+          },
+          {
+            "label": "docker container download & docker container run",
+            "isCorrect": false
+          },
+          {
+            "label": "docker container start",
+            "isCorrect": false
+          },
+          {
+            "label": "docker run",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What does the \"docker commit\" command do?",
+        "choices": [
+          {
+            "label": "It is a shorthand for executing \"git commit\" in a container running git",
+            "isCorrect": false
+          },
+          {
+            "label": "It does not work on Windows",
+            "isCorrect": false
+          },
+          {
+            "label": "It is an alias for \"docker container commit\"",
+            "isCorrect": true
+          },
+          {
+            "label": "It saves a snapshot of the current state of a container as a new Docker image",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What happens if we store data in a container and restart it?",
+        "choices": [
+          {
+            "label": "The data is lost",
+            "isCorrect": false
+          },
+          {
+            "label": "The data is kept",
+            "isCorrect": true
+          },
+          {
+            "label": "The container name changes",
+            "isCorrect": false
+          },
+          {
+            "label": "The container name is kept",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What happens if we store data in a container, delete it and re-run it?",
+        "choices": [
+          {
+            "label": "The data is lost",
+            "isCorrect": true
+          },
+          {
+            "label": "The data is kept",
+            "isCorrect": false
+          },
+          {
+            "label": "The container name changes",
+            "isCorrect": true
+          },
+          {
+            "label": "The container name is kept",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Because of data loss issues, is it safe to run a database in a container?",
+        "choices": [
+          {
+            "label": "Yes, if you use docker volumes",
+            "isCorrect": true
+          },
+          {
+            "label": "Yes, if you backup the host's hard drive regularly",
+            "isCorrect": false
+          },
+          {
+            "label": "Yes, if you use docker commit and backup the host's hard drive regularly",
+            "isCorrect": false
+          },
+          {
+            "label": "No, never use containers for databases!",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which of these claims about Docker are true?",
+        "choices": [
+          {
+            "label": "It allows to easily spin multiple instances/versions of the same app",
+            "isCorrect": true
+          },
+          {
+            "label": "It simplifies the process of making runs reproducible",
+            "isCorrect": true
+          },
+          {
+            "label": "It makes it easy to run Unix tools on Windows",
+            "isCorrect": true
+          },
+          {
+            "label": "It slows down the process performance (-30%)",
+            "isCorrect": false
+          },
+          {
+            "label": "It simplifies monitoring",
+            "isCorrect": false
+          },
+          {
+            "label": "It makes deployments easier",
+            "isCorrect": true
+          },
+          {
+            "label": "It is the only way to truly embrace the DevOps mindset",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Go containerize the galaxy! Here is your flag: QUIZ_DOCKER_DEV1_SEC0_OPS2_h2daqbduo3tk1o052d3ehgiy51khhg6po9plq85lh4v9i24r"
+  },
+  {
+    "id": "6sj5a4jc9y9c92iwzgwfqk3s6u5wm8i4x62828e6v7656x54",
+    "title": "Are you agile?",
+    "description": "This is to test your knowledge about Scrum methodology regarding the Scrum guide. If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Who is on the Scrum Team?",
+        "choices": [
+          {
+            "label": "The Scrum Master",
+            "isCorrect": true
+          },
+          {
+            "label": "The Quality Analyst",
+            "isCorrect": false
+          },
+          {
+            "label": "The Product Owner",
+            "isCorrect": true
+          },
+          {
+            "label": "The Development Team",
+            "isCorrect": true
+          },
+          {
+            "label": "The Project Manager",
+            "isCorrect": false
+          },
+          {
+            "label": "The UX Designer",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What type of process control is Scrum based on?",
+        "choices": [
+          {
+            "label": "Hybrid",
+            "isCorrect": false
+          },
+          {
+            "label": "Empirical",
+            "isCorrect": true
+          },
+          {
+            "label": "Complex",
+            "isCorrect": false
+          },
+          {
+            "label": "Defined",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the Product Owner responsible for?",
+        "choices": [
+          {
+            "label": "Writing complex user stories",
+            "isCorrect": false
+          },
+          {
+            "label": "Managing the project and ensuring the stakeholders are happy",
+            "isCorrect": false
+          },
+          {
+            "label": "Optimizing the value of the development team work",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is the duration of the daily scrum meeting?",
+        "choices": [
+          {
+            "label": "30 minutes",
+            "isCorrect": false
+          },
+          {
+            "label": "15 minutes",
+            "isCorrect": true
+          },
+          {
+            "label": "No specific duration, everyone must talk during 2 minutes",
+            "isCorrect": false
+          },
+          {
+            "label": "As long as needed",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Who is responsible for managing the progress of work during a Sprint?",
+        "choices": [
+          {
+            "label": "The Product Owner",
+            "isCorrect": false
+          },
+          {
+            "label": "The Scrum Master",
+            "isCorrect": false
+          },
+          {
+            "label": "The Tech Leader",
+            "isCorrect": false
+          },
+          {
+            "label": "The Development Team",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "The length of a sprint is",
+        "choices": [
+          {
+            "label": "One month maximum",
+            "isCorrect": true
+          },
+          {
+            "label": "Two months maximum",
+            "isCorrect": false
+          },
+          {
+            "label": "15 days maximum",
+            "isCorrect": false
+          },
+          {
+            "label": "3 weeks maximum",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the impact of technical debt?",
+        "choices": [
+          {
+            "label": "A bigger maintenance budget on the product",
+            "isCorrect": true
+          },
+          {
+            "label": "The developers are depressive",
+            "isCorrect": false
+          },
+          {
+            "label": "The CEO of the company could be fired",
+            "isCorrect": false
+          },
+          {
+            "label": "The velocity is reduced",
+            "isCorrect": true
+          },
+          {
+            "label": "Less delivery of value on the long term",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "When can the Product Backlog be updated?",
+        "choices": [
+          {
+            "label": "Only if the stakeholders agree",
+            "isCorrect": false
+          },
+          {
+            "label": "Never",
+            "isCorrect": false
+          },
+          {
+            "label": "At any time with agreement of the Product owner",
+            "isCorrect": true
+          },
+          {
+            "label": "Only during the Product Backlog refinement",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Regarding the Definition of Done, performance tests must be passed at each sprint. The team can't do it. What to do about it?",
+        "choices": [
+          {
+            "label": "The Development Team does its best. The tests will be passed later",
+            "isCorrect": false
+          },
+          {
+            "label": "Add a technical story to implement the performance tests",
+            "isCorrect": true
+          },
+          {
+            "label": "Note the problem on a red post-it",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the recommended size for a Scrum team?",
+        "choices": [
+          {
+            "label": "3-9 people",
+            "isCorrect": true
+          },
+          {
+            "label": "6-12 people",
+            "isCorrect": false
+          },
+          {
+            "label": "It doesn’t matter",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "When should a retrospective meeting be held?",
+        "choices": [
+          {
+            "label": "At the end of each sprint, before the demo",
+            "isCorrect": false
+          },
+          {
+            "label": "At any time, when needed",
+            "isCorrect": false
+          },
+          {
+            "label": "At the end of each delivery, exclusively",
+            "isCorrect": false
+          },
+          {
+            "label": "At the end of each sprint, after the demo",
+            "isCorrect": true
+          },
+          {
+            "label": "At the end of the project",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What must a Scrum Team do during the first sprint?",
+        "choices": [
+          {
+            "label": "Write all detailed user stories of the project ",
+            "isCorrect": false
+          },
+          {
+            "label": "Deliver a first valuable increment of the product",
+            "isCorrect": true
+          },
+          {
+            "label": "Assess the whole budget of the project",
+            "isCorrect": false
+          },
+          {
+            "label": "Test the product",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "The CEO asked the team to do some work outside of the current Sprint objectives. What to do about it?",
+        "choices": [
+          {
+            "label": "Add it to the current sprint and remove some tasks from the current sprint",
+            "isCorrect": false
+          },
+          {
+            "label": "Handle it within the next sprint",
+            "isCorrect": false
+          },
+          {
+            "label": "Inform the product owner to discuss it with the CEO",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "It seems like you are definitely agile! Here is your flag: QUIZ_AGILITY_DEV1_SEC0_OPS0_7YcKz7zTYtb66LP6385sy5dx4auQWgS9yd9dC2LCK7H4FmX6"
+  },
+  {
+    "id": "r6mq3kxk4jh545izp778446838f65q8hii2jpgr26n3i7pf9",
+    "title": "Being Agile before the code",
+    "description": "Agility is a state of mind and the methodology can only be executed if people have the right mindset and practices. Have you listened to the talk given by MALLO Charlotte? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What was the objective of the digital Leaders event?",
+        "choices": [
+          {
+            "label": "Present Technology topics",
+            "isCorrect": false
+          },
+          {
+            "label": "Talk about digital innovation",
+            "isCorrect": false
+          },
+          {
+            "label": "Mix business and technology topics to enhance awareness",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Who can take part to the Pitch sessions?",
+        "choices": [
+          {
+            "label": "Everybody",
+            "isCorrect": true
+          },
+          {
+            "label": "IT family members",
+            "isCorrect": false
+          },
+          {
+            "label": "Pitch community only",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "How did we manage to improve our formats over time?",
+        "choices": [
+          {
+            "label": "Thinking to the format quite a long time before implementing it",
+            "isCorrect": true
+          },
+          {
+            "label": "Execute fast and collect feedback",
+            "isCorrect": false
+          },
+          {
+            "label": "Asking people what they need",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_BEINGAGILEBEFORETHECODE_DEV1_SEC0_OPS0_csv37z57563j9x7ivan4u2v2g44396y46azs5qn8235yihxq"
+  },
+  {
+    "id": "5s2dy2js39yyn7czq9ks442s2h8btgv58g5892q486u458ic",
+    "title": "Javascript Developer, you should know it",
+    "description": "Which framework do I choose? What if it was not the right question? Have you listened to the talk given by MEUNIER Johnathan? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What will the following code do? <br/> let a = { firstname: \"Luke\", name: \"Skywalker\" } <br/> console.log(Object.entries(a))",
+        "choices": [
+          {
+            "label": "[{key:\"firstname\", value:\"Luke\"}, {key:\"name\", value:\"Skywalker\"}]",
+            "isCorrect": false
+          },
+          {
+            "label": "[[\"firstname\", \"Luke\"], [\"name\", \"Skywalker\"]]",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which function checks that all the elements of an array meet a predicate?",
+        "choices": [
+          {
+            "label": "forEach",
+            "isCorrect": false
+          },
+          {
+            "label": "some",
+            "isCorrect": false
+          },
+          {
+            "label": "every",
+            "isCorrect": true
+          },
+          {
+            "label": "reduce",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which function transform an array of elements into a single one through an accumulation?",
+        "choices": [
+          {
+            "label": "reduce",
+            "isCorrect": true
+          },
+          {
+            "label": "aggregate",
+            "isCorrect": false
+          },
+          {
+            "label": "map",
+            "isCorrect": false
+          },
+          {
+            "label": "filter",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which method is pure?",
+        "choices": [
+          {
+            "label": "(items) => { items.a = items.a * 2; return items; }",
+            "isCorrect": false
+          },
+          {
+            "label": "(a, b) => { console.log(a + b); return a + b; }",
+            "isCorrect": false
+          },
+          {
+            "label": "(days) => new Date().getDate() + days;",
+            "isCorrect": false
+          },
+          {
+            "label": "(date, days) => date.getDate() + days;",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "How do you tell the console to group your logs?",
+        "choices": [
+          {
+            "label": "Wrap with console.group and console.groupEnd",
+            "isCorrect": true
+          },
+          {
+            "label": "Wrap with console.join and console.endJoin",
+            "isCorrect": false
+          },
+          {
+            "label": "Wrap with console.startGroup and console.endGroup",
+            "isCorrect": false
+          },
+          {
+            "label": "Wrap with console.startJoin and console.endJoin",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_JAVASCRIPTDEVELOPER_DEV1_SEC0_OPS0_u39dsx9vf6929q3m26si2yqb8c253z9gdf7wv9nn7m92889y"
+  },
+  {
+    "id": "f2d937q9hmzahw787pv89mna9vsfcx228a52bihg82586769",
+    "title": "Cloud Wars : The pentest of the DevBots",
+    "description": "Could you imagine a full cloud solution without strings detecting right at the beginning and continuously, with a Security bot team that reacts instantly to any request due a centralized vulnerability center? Have you listened to the talk given by DE FEO MARTINEZ Aldo? If you succeed, you will get a bonus flag worth 1 point of Sec. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is the best stage to test security in your project?",
+        "choices": [
+          {
+            "label": "Before Production, just releases code candidate to be Pentest",
+            "isCorrect": false
+          },
+          {
+            "label": "After deploying in UAT",
+            "isCorrect": false
+          },
+          {
+            "label": "In each deployment in each environment",
+            "isCorrect": false
+          },
+          {
+            "label": "After the first commit into my branch",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "In your Release Pipeline where you can find your security vulnerabilities using AXA Partner ZAP Scan custom task in Azure DevOps?",
+        "choices": [
+          {
+            "label": "Before Deployment",
+            "isCorrect": false
+          },
+          {
+            "label": "After Deployment",
+            "isCorrect": true
+          },
+          {
+            "label": "Pre-Approval Gate",
+            "isCorrect": false
+          },
+          {
+            "label": "Post-Approval Gate",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the name of the new Security portal created by AXA Partners?",
+        "choices": [
+          {
+            "label": "Secoogle",
+            "isCorrect": false
+          },
+          {
+            "label": "VulsCenter",
+            "isCorrect": false
+          },
+          {
+            "label": "Secportal",
+            "isCorrect": true
+          },
+          {
+            "label": "DefectDojo",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the best way to communicate with the New Security Portal?",
+        "choices": [
+          {
+            "label": "API",
+            "isCorrect": true
+          },
+          {
+            "label": "Web Portal",
+            "isCorrect": false
+          },
+          {
+            "label": "Skype chat",
+            "isCorrect": false
+          },
+          {
+            "label": "Email",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_CLOUDWARS_DEV0_SEC1_OPS0_ki435726wh699mg5m3xu2mn6b7u9be2iq8n77j6xaibr3522"
+  },
+  {
+    "id": "ia93xsb88xa5djf7n384kw57htfq82962an4u9rh862w369c",
+    "title": "Prometheus, grafana : from instrumentation to monitoring",
+    "description": "How to use Prometheus in a Kubernetes/Openshift context? How to instrument your NodeJS code to expose metrics? How to connect Prometheus to all your projects running in a shared cluster? How to organize your Grafana dashboard with all the metrics available? Have you listened to the talk given by BICH Johann? If you succeed, you will get a bonus flag worth 1 point of Dev and 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Prometheus is",
+        "choices": [
+          {
+            "label": "a monitoring toolkit",
+            "isCorrect": true
+          },
+          {
+            "label": "a very bad movie",
+            "isCorrect": false
+          },
+          {
+            "label": "a Greek guy",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "To monitor your application with Prometheus, your app needs",
+        "choices": [
+          {
+            "label": "nothing, Prometheus is smart enough to gets everything from any application",
+            "isCorrect": false
+          },
+          {
+            "label": "a screen",
+            "isCorrect": false
+          },
+          {
+            "label": "some metrics to be exposed and available through a endpoint",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "In which way the monitoring with Prometheus is done?",
+        "choices": [
+          {
+            "label": "Your app will push the metrics to the Prometheus server",
+            "isCorrect": false
+          },
+          {
+            "label": "Prometheus will pull the metrics from your app",
+            "isCorrect": true
+          },
+          {
+            "label": "A mail is sent on a daily basis to a team that enters the metrics manually in the DB",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Grafana is used for...?",
+        "choices": [
+          {
+            "label": "parsing the metrics",
+            "isCorrect": false
+          },
+          {
+            "label": "providing the query language that is used by Prometheus",
+            "isCorrect": false
+          },
+          {
+            "label": "creating visualization",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Alert manager can...",
+        "choices": [
+          {
+            "label": "only send emails",
+            "isCorrect": false
+          },
+          {
+            "label": "vonnect to a wide range of receiver",
+            "isCorrect": true
+          },
+          {
+            "label": "call you on your phone",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_PROMETHEUSGRAFANA_DEV1_SEC0_OPS1_t8fw8p4mv5rvg2t832i328762kkjqj3n7hw2395bx8x67e5z"
+  },
+  {
+    "id": "mpn3u7j79asw26y7py6w5xc63dp8g35du487q56ue795g2b2",
+    "title": "Build at cloud speed (enabling Developer autonomy)",
+    "description": "Have you listened to the talk given by MONTEITH Kelly about the sharing AWS Landing Zone v2. If you succeed, you will get a bonus flag worth 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What AWS service provides threat detection and continuously monitors for malicious or unauthorized behavior?",
+        "choices": [
+          {
+            "label": "Guarduty",
+            "isCorrect": true
+          },
+          {
+            "label": "CloudWatch",
+            "isCorrect": false
+          },
+          {
+            "label": "CloudTrail",
+            "isCorrect": false
+          },
+          {
+            "label": "Config",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What are the AWS and Azure Services that enable dedicated & private network connections from your on premises datacenters?",
+        "choices": [
+          {
+            "label": "VPC and VNET peering",
+            "isCorrect": false
+          },
+          {
+            "label": "DirectConnect & ExpressRoute",
+            "isCorrect": true
+          },
+          {
+            "label": "AWS and Azure Transit Gateway",
+            "isCorrect": false
+          },
+          {
+            "label": "Servicemesh",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the AWS solution to help build a secure, multi-account AWS environments based on AWS best practices?",
+        "choices": [
+          {
+            "label": "Service Catalog",
+            "isCorrect": false
+          },
+          {
+            "label": "AWS Foundations",
+            "isCorrect": false
+          },
+          {
+            "label": "Landing Zone",
+            "isCorrect": true
+          },
+          {
+            "label": "Virtual Private Cloud",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the Azure service that you use to create and assign rules to your resources, so those resources stay compliant with your corporate standards and service level agreements?",
+        "choices": [
+          {
+            "label": "Azure Policy",
+            "isCorrect": true
+          },
+          {
+            "label": "Management Groups",
+            "isCorrect": false
+          },
+          {
+            "label": "Security Centre",
+            "isCorrect": false
+          },
+          {
+            "label": "App Service Environment",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What do Public Cloud providers call the physical Data Centre locations that provide physical redundancy (independent power, cooling, and networking) within a geographical location?",
+        "choices": [
+          {
+            "label": "Availability Zones",
+            "isCorrect": true
+          },
+          {
+            "label": "Data Centre Sites",
+            "isCorrect": false
+          },
+          {
+            "label": "Regions",
+            "isCorrect": false
+          },
+          {
+            "label": "Disaster Zones",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_BUILDATCLOUDSPEED_DEV0_SEC0_OPS1_d642fgb67mnuzgh33558ya7xs592t6bv946s262cptn87j2v"
+  },
+  {
+    "id": "6y6g5479w623yzesbr632v44cq9qu9f3u44738r5i9hsawbe",
+    "title": "Conversational AI : How to understand natural language",
+    "description": "The Open Source library developed by AXA for Natural Language Processing in bots, got improvements that got it surpassing all the other NLP products on the SIGDIAL22 score, that is the accepted way to score Nautral Language Understanding. The previous record was IBM Watson with a 0.92 score, NLP.js has now the record with a 0.94 score. How a NLU for chatbots can be built? Have you listened to the talk given by SEIJAS Jesus? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What does NLP stands for?",
+        "choices": [
+          {
+            "label": "Neuro Linguistic Programming",
+            "isCorrect": false
+          },
+          {
+            "label": "Natural Language Processing",
+            "isCorrect": true
+          },
+          {
+            "label": "Natural Language Programming",
+            "isCorrect": false
+          },
+          {
+            "label": "Not Like Programming",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In NLP the action that the user means with the sentence is called...",
+        "choices": [
+          {
+            "label": "label",
+            "isCorrect": false
+          },
+          {
+            "label": "class",
+            "isCorrect": false
+          },
+          {
+            "label": "intent",
+            "isCorrect": true
+          },
+          {
+            "label": "utterance",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which activation functions works better for the NLP problem?",
+        "choices": [
+          {
+            "label": "Sigmoid and ReLU",
+            "isCorrect": false
+          },
+          {
+            "label": "Tanh and ReLU",
+            "isCorrect": false
+          },
+          {
+            "label": "Tanh and Leaky-ReLU",
+            "isCorrect": true
+          },
+          {
+            "label": "Sigmoid and Leaky-ReLU",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "The usual steps to convert a sentence to a vector of features are…",
+        "choices": [
+          {
+            "label": "Tokenization and streaming",
+            "isCorrect": false
+          },
+          {
+            "label": "Normalization and stemming",
+            "isCorrect": false
+          },
+          {
+            "label": "Dash and split",
+            "isCorrect": false
+          },
+          {
+            "label": "Tokenization and stemming",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Can an in-house method work as well as a commercial one?",
+        "choices": [
+          {
+            "label": "Nope, that’s impossible",
+            "isCorrect": false
+          },
+          {
+            "label": "Yes, you can have an average solution",
+            "isCorrect": false
+          },
+          {
+            "label": "Yes, and even perform better",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_CONVERSATIONALAI_DEV1_SEC0_OPS0_h7s582j96p873h8c77mu2biy8sj62gkj8k8678y4yycc4k6f"
+  },
+  {
+    "id": "9q42hvytb2r545ytr84s655sw8483kfyk35936bpq74ras6f",
+    "title": "Italian My Axa - An Agile + DevOps Case Study",
+    "description": "Italy developed MyAXA from scratch and in house. Have you listened to the talk given by PORTELLI Carmelo? If you succeed, you will get a bonus flag worth 1 point of Dev and 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What are the main differences between Blue-Green Deployment AND standard OpenPaaS deployment?",
+        "choices": [
+          {
+            "label": "They are the same",
+            "isCorrect": false
+          },
+          {
+            "label": "The first allows hot deployment of microservices having mutual dependencies",
+            "isCorrect": true
+          },
+          {
+            "label": "The first uses less memory",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Can Blue-Green deployment be used for fast rollback?",
+        "choices": [
+          {
+            "label": "Yes",
+            "isCorrect": true
+          },
+          {
+            "label": "No",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What of the following can be considered a drowback of GraphQL?",
+        "choices": [
+          {
+            "label": "The schema is not public, so backenders and fronteders must share it",
+            "isCorrect": false
+          },
+          {
+            "label": "Retrieving some field could be more expensive than others, frontenders must pay attention",
+            "isCorrect": true
+          },
+          {
+            "label": "No drowbacks",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "MyAXA uses Remote Config for...",
+        "choices": [
+          {
+            "label": "Feature switching + Labels",
+            "isCorrect": true
+          },
+          {
+            "label": "Change the Look & Feel",
+            "isCorrect": false
+          },
+          {
+            "label": "It is not used",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "How many POs and Scrum Masters does My AXA have?",
+        "choices": [
+          {
+            "label": "1 PO and 2 SMs",
+            "isCorrect": false
+          },
+          {
+            "label": "2 POs and 1 SMs",
+            "isCorrect": false
+          },
+          {
+            "label": "3 POs and 2 SMs",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_ITALIANMYAXA_DEV1_SEC0_OPS1_97m897j2c9773nrmgxnf8573nn9fzpfd42774p4i23sxmw7s"
+  },
+  {
+    "id": "ub29vc5n8545rd49686we582crr66aa4s4run924v6c4qiec",
+    "title": "Falling down holes for beginners : Getting started in open source",
+    "description": "Getting started in open source is a daunting experience and most don’t since they feel they have nothing to bring to the party. Using myself as an example I’ll explain how I got into open source, the resources and tools that helped me and how you can too. Have you listened to the talk given by McAULIFFE Alex? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is a recommended source for information on open source projects?",
+        "choices": [
+          {
+            "label": "Project repositories like GitHub",
+            "isCorrect": true
+          },
+          {
+            "label": "Social Media",
+            "isCorrect": true
+          },
+          {
+            "label": "Developer blogs",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Choosing a license for your open source project is hard, what should you use to help?",
+        "choices": [
+          {
+            "label": "choosealicence.com",
+            "isCorrect": true
+          },
+          {
+            "label": "A lawyer",
+            "isCorrect": false
+          },
+          {
+            "label": "Who needs a license?",
+            "isCorrect": false
+          },
+          {
+            "label": "Copy one from another project",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In my talk what was it that made everything go wrong?",
+        "choices": [
+          {
+            "label": "Ambition",
+            "isCorrect": false
+          },
+          {
+            "label": "Having a life",
+            "isCorrect": false
+          },
+          {
+            "label": "Burnout",
+            "isCorrect": true
+          },
+          {
+            "label": "Work",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Why should companies care about open source?",
+        "choices": [
+          {
+            "label": "A lot of their systems require it willingly or not",
+            "isCorrect": true
+          },
+          {
+            "label": "Their competitor is using it",
+            "isCorrect": false
+          },
+          {
+            "label": "Alternatives are expensive",
+            "isCorrect": false
+          },
+          {
+            "label": "Their developers are unhappy",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What can you do right now to help open source?",
+        "choices": [
+          {
+            "label": "Write a talk and convince others to join",
+            "isCorrect": false
+          },
+          {
+            "label": "Find a project and write some getting started documentation",
+            "isCorrect": true
+          },
+          {
+            "label": "Leave it alone",
+            "isCorrect": false
+          },
+          {
+            "label": "Include them in your projects",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_FALLINGDOWNHOLES_DEV1_SEC0_OPS0_72959m3nuek7d7p7iruxfx5857y5abbf9659d4rub6552ke9"
+  },
+  {
+    "id": "v2ved5n285j48sn9y56z298g836we52jych64cni56es9zb9",
+    "title": "Programming the Cloud : Orchestrating Cloud native infrastructure using Typescript",
+    "description": "In a dev-ops world our infrastructure is as important as our applications and should be treated as a first-class citizen. Have you listened to the talk given by McAULIFFE Alex about how using Typescript and Pulumi we can describe our infrastructure using code rather than configuration such as Yaml or JSON.  If you succeed, you will get a bonus flag worth 1 point of Dev and 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What are one of the core advantages of Cloud Native computing?",
+        "choices": [
+          {
+            "label": "Applications are faster due to more resources",
+            "isCorrect": false
+          },
+          {
+            "label": "Systems are loosely coupled making them resilient, managed and observable",
+            "isCorrect": true
+          },
+          {
+            "label": "Cheaper to run due to scalability",
+            "isCorrect": false
+          },
+          {
+            "label": "More variety in technology choices",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Yaml is often used in cloud configuration, what does Yes mean when used as a value?",
+        "choices": [
+          {
+            "label": "Yes",
+            "isCorrect": false
+          },
+          {
+            "label": "No",
+            "isCorrect": false
+          },
+          {
+            "label": "True",
+            "isCorrect": true
+          },
+          {
+            "label": "False",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What should all applications strive to be?",
+        "choices": [
+          {
+            "label": "Less Technical debt",
+            "isCorrect": false
+          },
+          {
+            "label": "Cloud native",
+            "isCorrect": true
+          },
+          {
+            "label": "Gold plated",
+            "isCorrect": false
+          },
+          {
+            "label": "Technically complex",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Our applications should run on very specialized environments",
+        "choices": [
+          {
+            "label": "True - We should treat them like pets and name them",
+            "isCorrect": false
+          },
+          {
+            "label": "False - We should treat them like cattle",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is the primary advantage of using programming languages instead of DSLs like yaml for our infrastructure?",
+        "choices": [
+          {
+            "label": "We can break up our code into multiple files",
+            "isCorrect": false
+          },
+          {
+            "label": "Tooling that is designed for purpose",
+            "isCorrect": false
+          },
+          {
+            "label": "Autocompletion",
+            "isCorrect": false
+          },
+          {
+            "label": "We can create abstractions allowing reuse and simplification",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_PROGRAMMINGTHECLOUD_DEV1_SEC0_OPS1_63n27nv3243r3xeyiq2445656knsbbg779y4vbebk47pg9k5"
+  },
+  {
+    "id": "uq6hg2746apn293buv5xf723657hfa34vt7wcywd7gu54447",
+    "title": "Shifting security left : the security champion journey",
+    "description": "In an agile development world, features are being delivered to production faster than ever, which is great for business, but how do we ensure that these features adhere to ever-increasing security considerations? Have you listened to the talk given by MILLS Calvin? If you succeed, you will get a bonus flag worth 1 point of Sec. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Who pioneered the “Start with why” school of thought?",
+        "choices": [
+          {
+            "label": "Steve Jobs",
+            "isCorrect": false
+          },
+          {
+            "label": "Simon Sinek",
+            "isCorrect": true
+          },
+          {
+            "label": "Robert Martin",
+            "isCorrect": false
+          },
+          {
+            "label": "Gene Kim",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is BSIMM the acronym for?",
+        "choices": [
+          {
+            "label": "Bundle Security In Metadata-Management",
+            "isCorrect": false
+          },
+          {
+            "label": "Build Secure Interfaces with Multiple Macros",
+            "isCorrect": false
+          },
+          {
+            "label": "Building Security In Maturity Model",
+            "isCorrect": true
+          },
+          {
+            "label": "Bringing Security Into Management Meetings",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which member of a dev team can become a security champion?",
+        "choices": [
+          {
+            "label": "Manual/Automated tester",
+            "isCorrect": true
+          },
+          {
+            "label": "Developer",
+            "isCorrect": true
+          },
+          {
+            "label": "Product owner",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What are the responsibilities of a security champion?",
+        "choices": [
+          {
+            "label": "Liaising with security about their product",
+            "isCorrect": true
+          },
+          {
+            "label": "Encouraging application security best practices",
+            "isCorrect": true
+          },
+          {
+            "label": "Helping other team members learn about security",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is the role of a security champion?",
+        "choices": [
+          {
+            "label": "A mandatory position",
+            "isCorrect": false
+          },
+          {
+            "label": "A permanent position",
+            "isCorrect": false
+          },
+          {
+            "label": "A separate member of the dev team",
+            "isCorrect": false
+          },
+          {
+            "label": "A voluntary position",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is a great Non-Profit Organization which can be used to learn more about common application security threats?",
+        "choices": [
+          {
+            "label": "OWASP",
+            "isCorrect": true
+          },
+          {
+            "label": "PASSW",
+            "isCorrect": false
+          },
+          {
+            "label": "SECWASP",
+            "isCorrect": false
+          },
+          {
+            "label": "None of the above",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the primary advantage of having a security champion in your dev team?",
+        "choices": [
+          {
+            "label": "They can approve your changes instead of a member of security",
+            "isCorrect": false
+          },
+          {
+            "label": "Help to deliver secure code to production faster",
+            "isCorrect": true
+          },
+          {
+            "label": "You won’t have to worry about security if another member is a security champion",
+            "isCorrect": false
+          },
+          {
+            "label": "You won’t have to listen to business security anymore",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_SHIFTINGSECURITYLEFT_DEV0_SEC1_OPS0_28ej92d2xc5s7b45vbcp49339xapth6d57f8z3r6h42km39m"
+  },
+  {
+    "id": "97zbq9m478kyyey2c39t73f894et4jnr2c32khm84tn8i953",
+    "title": "BDD : what is it in reality?",
+    "description": "BDD is a mindset: it is a way to conceive software development process with higher quality and creating more cohesion between development and business. Have you listened to the talk given by SALMERON Victoria? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Which of the following is not a BDD Maturity level?",
+        "choices": [
+          {
+            "label": "Automate",
+            "isCorrect": false
+          },
+          {
+            "label": "Force the conversation",
+            "isCorrect": false
+          },
+          {
+            "label": "Definition by example",
+            "isCorrect": true
+          },
+          {
+            "label": "Living documentation",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which of the following statements does not apply when you are doing BDD properly?",
+        "choices": [
+          {
+            "label": "There should not be space for misunderstandings about the Acceptance Criteria (subjective interpretation)",
+            "isCorrect": false
+          },
+          {
+            "label": "Whoever that is external to the team and to the project should be able to understand a test scenario without having any knowledge about the related product or functionality",
+            "isCorrect": false
+          },
+          {
+            "label": "You should not document the product behavior more than what is documented in the test scenarios (living documentation, executable specifications)",
+            "isCorrect": false
+          },
+          {
+            "label": "The effort for automating and maintaining the test scenarios increases along with the time",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "One of the below statements is incorrect if you want to apply BDD in a proper way:",
+        "choices": [
+          {
+            "label": "Developers and QAs have a common understanding about the Acceptance Criteria",
+            "isCorrect": true
+          },
+          {
+            "label": "The whole team participates in the definition of the scenario’s behavior (by defining or reviewing)",
+            "isCorrect": false
+          },
+          {
+            "label": "The whole team understand the same language (technical vs. business profiles)",
+            "isCorrect": false
+          },
+          {
+            "label": "The scenarios behavior is used for coding and test the feature",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which of the following statements about BDD is FALSE?",
+        "choices": [
+          {
+            "label": "It is an extension of TDD (Test Driven Development)",
+            "isCorrect": false
+          },
+          {
+            "label": "BDD is an approach that consists on defining the behavior of a feature through examples of the use cases involved in that feature",
+            "isCorrect": false
+          },
+          {
+            "label": "Examples are called Scenarios that are written in natural language and are defined before the development starts, thus, are being used as the Acceptance Tests",
+            "isCorrect": false
+          },
+          {
+            "label": "Scenarios test the implementation and not the behaviour",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which of the following statements about BDD is FALSE?",
+        "choices": [
+          {
+            "label": "BDD does not bring extra costs and drastically accelerates the development process (less misunderstandings means less bugs and less refactors)",
+            "isCorrect": false
+          },
+          {
+            "label": "You can apply BDD methodology only if you write scenarios with Gherkin language",
+            "isCorrect": true
+          },
+          {
+            "label": "Gherkin alone is not BDD",
+            "isCorrect": false
+          },
+          {
+            "label": "Before applying BDD with a high maturity level ensure that you have enough resources to carry it out, otherwise it can become a bottleneck on your development process",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_BDD_DEV1_SEC0_OPS0_i6zapi62k4i9qypq9828ze3636w4wdi9q5ajp38nt997f795"
+  },
+  {
+    "id": "2z645sfq45thnf3h27v5i346acyd28g3f92u85wd4e72e7cg",
+    "title": "Building an agile Data Science Workflow at AXA",
+    "description": "At AXA BE Datalab, we have been working on those problems since more than 2 years and we have lessons learned and proper solutions implemented including Microservice (docker), CI/CD (airflow, jenkins) and Cloud Native service (AWS, Openpaas, Helm Charts), ML frameworks (seldon-core, Mlflow). Have you listened to the talk given by OUAZZA Mehdi & CLAES Vincent? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is a common tool for doing data exploration?",
+        "choices": [
+          {
+            "label": "Jupyter",
+            "isCorrect": true
+          },
+          {
+            "label": "Jetbrains IDE",
+            "isCorrect": false
+          },
+          {
+            "label": "VS code",
+            "isCorrect": false
+          },
+          {
+            "label": "vim",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is a common tool for scheduling data pipelines?",
+        "choices": [
+          {
+            "label": "Crontab",
+            "isCorrect": false
+          },
+          {
+            "label": "Airflow",
+            "isCorrect": true
+          },
+          {
+            "label": "Task scheduler",
+            "isCorrect": false
+          },
+          {
+            "label": "Jenkins",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is a popular framework for processing big data?",
+        "choices": [
+          {
+            "label": "Spark",
+            "isCorrect": true
+          },
+          {
+            "label": "Spirk",
+            "isCorrect": false
+          },
+          {
+            "label": "React",
+            "isCorrect": false
+          },
+          {
+            "label": "Pandas",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which one does not belong here?",
+        "choices": [
+          {
+            "label": "Data exploration",
+            "isCorrect": false
+          },
+          {
+            "label": "Data processing",
+            "isCorrect": false
+          },
+          {
+            "label": "Data modelling",
+            "isCorrect": false
+          },
+          {
+            "label": "Data governance",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which language is the least used in data science?",
+        "choices": [
+          {
+            "label": "Scala",
+            "isCorrect": false
+          },
+          {
+            "label": "Python",
+            "isCorrect": false
+          },
+          {
+            "label": "Javascript",
+            "isCorrect": true
+          },
+          {
+            "label": "R",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_BUILDINGANAGILEDATASCIENCE_DEV1_SEC0_OPS0_2h69x439hvx577kn4r2tk768wt3mgauc6em2u85t4q956f7s"
+  },
+  {
+    "id": "nw9h985428vk3iu8k4f2uiu829eq37kwd22785j6nyq99euw",
+    "title": "Modern agile ui-testautomation to laverage CI/CD",
+    "description": "Want to use the CI/CD process even for web based applications? Want to be sure it runs on different browsers perfectly? Want not to reinvent the wheel again but use a great toolkit? Want to get a great management compatible report for free? Have you listened to the talk given by HOSTETTLER Michel & PROTOGERAKIS Stephan? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Which part of the CI/CD process is mainly on focus when talking about Selenium?",
+        "choices": [
+          {
+            "label": "Plan",
+            "isCorrect": false
+          },
+          {
+            "label": "Deploy",
+            "isCorrect": false
+          },
+          {
+            "label": "Monitor",
+            "isCorrect": false
+          },
+          {
+            "label": "Test",
+            "isCorrect": true
+          },
+          {
+            "label": "Operate",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does Selenium?",
+        "choices": [
+          {
+            "label": "Builds Browser",
+            "isCorrect": false
+          },
+          {
+            "label": "Tests Browser",
+            "isCorrect": false
+          },
+          {
+            "label": "Accelerates JavaScript-Engine in Chrome Browser",
+            "isCorrect": false
+          },
+          {
+            "label": "Automates Browsers",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which command of Selenium launches a new browser and opens the specified URL in the browser instance?",
+        "choices": [
+          {
+            "label": "Get",
+            "isCorrect": true
+          },
+          {
+            "label": "Open",
+            "isCorrect": false
+          },
+          {
+            "label": "Fetch",
+            "isCorrect": false
+          },
+          {
+            "label": "Perform",
+            "isCorrect": false
+          },
+          {
+            "label": "Invoke",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Who is the vendor of Selenium BOX?",
+        "choices": [
+          {
+            "label": "element32",
+            "isCorrect": false
+          },
+          {
+            "label": "element33",
+            "isCorrect": false
+          },
+          {
+            "label": "element34",
+            "isCorrect": true
+          },
+          {
+            "label": "element35",
+            "isCorrect": false
+          },
+          {
+            "label": "element36",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which of this is a W3C Standard?",
+        "choices": [
+          {
+            "label": "Toolkit",
+            "isCorrect": false
+          },
+          {
+            "label": "SeleniumBox",
+            "isCorrect": false
+          },
+          {
+            "label": "Selenium Webdriver",
+            "isCorrect": true
+          },
+          {
+            "label": "What is W3C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "How does the Sudoku solution work?",
+        "choices": [
+          {
+            "label": "The page was created by Michel and so he knew the solution",
+            "isCorrect": false
+          },
+          {
+            "label": "The page has always the same Sudoku and we solved it before writing the test",
+            "isCorrect": false
+          },
+          {
+            "label": "We have used an incredible Sudoku algorithm",
+            "isCorrect": false
+          },
+          {
+            "label": "The solution of the Sudoku can be seen in the DOM",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_UITESTAUTOMATION_DEV1_SEC0_OPS0_kz7587pk975qhwdw78es99q6i9f879nf56u356v3tinp6n3t"
+  },
+  {
+    "id": "g5eqe534gp5w49327n4u46pcc47unc74qx69fy45v8jmde24",
+    "title": "Data Processing : Basic Spark Processing in Scala",
+    "description": "Spark quickly enabled our team to setup the right data processing tasks. Have you listened to the talk given by CANELA Jean-Luc? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is Spark ?",
+        "choices": [
+          {
+            "label": "A music sharing app",
+            "isCorrect": false
+          },
+          {
+            "label": "An hairdressing salon",
+            "isCorrect": false
+          },
+          {
+            "label": "The result of connecting + and - on your car battery",
+            "isCorrect": false
+          },
+          {
+            "label": "A unified analytics engine for large-scale data processing",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Spark does not allow developers to?",
+        "choices": [
+          {
+            "label": "work with structured data",
+            "isCorrect": false
+          },
+          {
+            "label": "work with graph data",
+            "isCorrect": false
+          },
+          {
+            "label": "build scalable fault-tolerant streaming applications",
+            "isCorrect": false
+          },
+          {
+            "label": "play chess",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which of those is not used by a Spark developer?",
+        "choices": [
+          {
+            "label": "RDD",
+            "isCorrect": false
+          },
+          {
+            "label": "DataFrame",
+            "isCorrect": false
+          },
+          {
+            "label": "DataSet",
+            "isCorrect": false
+          },
+          {
+            "label": "Table space",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which function does not exist within the Spark API?",
+        "choices": [
+          {
+            "label": "filter",
+            "isCorrect": false
+          },
+          {
+            "label": "split",
+            "isCorrect": false
+          },
+          {
+            "label": "strip",
+            "isCorrect": false
+          },
+          {
+            "label": "blip",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which of the following formats are not a splittable format?",
+        "choices": [
+          {
+            "label": "csv.gz",
+            "isCorrect": true
+          },
+          {
+            "label": "parquet",
+            "isCorrect": false
+          },
+          {
+            "label": "avro",
+            "isCorrect": false
+          },
+          {
+            "label": "orc",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_DATAPROCESSING_DEV1_SEC0_OPS0_d5g3m6mahq5rdtqy9376n297gg6mh6v7bt83226b7r9c6x94"
+  },
+  {
+    "id": "9z4b3h33n75u58m968p56e8hae6x4gw49xidq4kv68ht2fp5",
+    "title": "Making Friends with Graph QL and NodeJS",
+    "description": "During the development of the new MyAXA v3, we found out some technical decisions are directly related to the team members relationship’ maturity. The communication between developers is a complex topic and it is a crucial point for the success of the product. In this talk, you will learn how GraphQL changed these interactions by breaking down the dichotomy between frontend and backend development teams and achieving a single communication approach. Have you listened to the talk given by HERRERO Francisco? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is GraphQL?",
+        "choices": [
+          {
+            "label": "Tool to design graphs",
+            "isCorrect": false
+          },
+          {
+            "label": "A netflix tv show",
+            "isCorrect": false
+          },
+          {
+            "label": "A query language",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What is a REST API?",
+        "choices": [
+          {
+            "label": "A sweet lullaby",
+            "isCorrect": false
+          },
+          {
+            "label": "Representational State Transfer API",
+            "isCorrect": true
+          },
+          {
+            "label": "Something much better than SOAP",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is APOLLO?",
+        "choices": [
+          {
+            "label": "NASA mission to the moon",
+            "isCorrect": false
+          },
+          {
+            "label": "A OpenSource library",
+            "isCorrect": true
+          },
+          {
+            "label": "A Greek god",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What comics based movie is better?",
+        "choices": [
+          {
+            "label": "Black panther",
+            "isCorrect": false
+          },
+          {
+            "label": "Infinity wars",
+            "isCorrect": true
+          },
+          {
+            "label": "Wonder Woman",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the harder part of computer sciences?",
+        "choices": [
+          {
+            "label": "Cache synchronisation",
+            "isCorrect": false
+          },
+          {
+            "label": "UI Responsive with media queries",
+            "isCorrect": false
+          },
+          {
+            "label": "Using JIRA",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_GRAPHQLANDNODJS_DEV1_SEC0_OPS0_hevabr599j759zqy36m6d8sp57cfnkf93i998q922e6d9v95"
+  },
+  {
+    "id": "btz7972m5hms2j99894k2yw87qk839niwf55rz32s4v7e3xv",
+    "title": "Insurance claim triage",
+    "description": "Every day, AXA Life Japan received about 1,000 customers requests for Health. The most part of those claims requests were processed, assessed and paid manually by the assessors. Those innovations, created in Agile methodology, are deployed into the AXA Managed Public Cloud and connected to the existing systems. All the data are saved in MongoDB to produce KPIs for the monitoring of the efficiency and enable future enhancements. Have you listened to the talk given by Takahiro ABE, Jonathan VACHERAT & Yuji NOMURA? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is the goal and purpose of the Claims triage project?",
+        "choices": [
+          {
+            "label": "Only detect fraud in claims using Machine Learning models",
+            "isCorrect": false
+          },
+          {
+            "label": "Automate a part of the claim handling business flow in AXA Life Japan",
+            "isCorrect": true
+          },
+          {
+            "label": "Automate the medical assessment of claims only, using a BRE and rules",
+            "isCorrect": false
+          },
+          {
+            "label": "Reduce the number of actual claims systems used in AXA Life Japan",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What do we think is the best way or working?",
+        "choices": [
+          {
+            "label": "Freestyle!",
+            "isCorrect": false
+          },
+          {
+            "label": "Business decides everything, IT executes",
+            "isCorrect": false
+          },
+          {
+            "label": "Agile, flat relations, iterative approach, internal development",
+            "isCorrect": true
+          },
+          {
+            "label": "Waterfall, top-down relations, external vendor-based development",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What BRE means?",
+        "choices": [
+          {
+            "label": "Broken Rules Engine",
+            "isCorrect": false
+          },
+          {
+            "label": "Business Review Engine",
+            "isCorrect": false
+          },
+          {
+            "label": "Business Rules Engine",
+            "isCorrect": true
+          },
+          {
+            "label": "Broker Resources Export",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What are the different types of claim processed by the Claims triage application?",
+        "choices": [
+          {
+            "label": "Surgery only",
+            "isCorrect": false
+          },
+          {
+            "label": "Hospitalization, Surgery and Death",
+            "isCorrect": false
+          },
+          {
+            "label": "All types",
+            "isCorrect": false
+          },
+          {
+            "label": "Surgery & Hospitalization (for now...)",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "How do we predict insurance claim frauds using Claims triage application?",
+        "choices": [
+          {
+            "label": "Intuition and experience",
+            "isCorrect": false
+          },
+          {
+            "label": "Machine learning",
+            "isCorrect": true
+          },
+          {
+            "label": "random.rand()",
+            "isCorrect": false
+          },
+          {
+            "label": "RepDecision tree written in a word documentonse",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the programming language commonly used for machine learning?",
+        "choices": [
+          {
+            "label": "C++",
+            "isCorrect": false
+          },
+          {
+            "label": "Java",
+            "isCorrect": false
+          },
+          {
+            "label": "Python",
+            "isCorrect": true
+          },
+          {
+            "label": "Haskell",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the specification used commonly to define APIs recently?",
+        "choices": [
+          {
+            "label": "Swagger",
+            "isCorrect": true
+          },
+          {
+            "label": "Mathematical equation",
+            "isCorrect": false
+          },
+          {
+            "label": "WSDL",
+            "isCorrect": false
+          },
+          {
+            "label": "Excel",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_INSURANCECLAIMTRIAGE_DEV1_SEC0_OPS0_3nk4ab5j24becj258mjt4565m2u228t7z97qmn9r5y5f8k2p"
+  },
+  {
+    "id": "z3tyuf35g666sq7wd76y3453894ycf8d3kpp2e5246jbqny4",
+    "title": "Continuous Testing in the cloud",
+    "description": "Test automation in our CI/CD platform is based on Azure Dev/test Lab solution. We can create test execution machine to launch our automated tests, get the results and delete the machine to reduce costs. Public cloud allow us to instantiate multiple VM to scale our tests. Have you listened to the talk given by DOMAIN Betty, GACHE Pierre Henry & HUCKERT Thibault? If you succeed, you will get a bonus flag worth 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "Which is the target platform used to run the solution?",
+        "choices": [
+          {
+            "label": "Amazon",
+            "isCorrect": false
+          },
+          {
+            "label": "CoreIT",
+            "isCorrect": false
+          },
+          {
+            "label": "Microsoft Azure",
+            "isCorrect": true
+          },
+          {
+            "label": "Private Cloud",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which tool is used to automate tests?",
+        "choices": [
+          {
+            "label": "LeanFT",
+            "isCorrect": true
+          },
+          {
+            "label": "Robot framework",
+            "isCorrect": false
+          },
+          {
+            "label": "Selenium Web Driver",
+            "isCorrect": false
+          },
+          {
+            "label": "UFT",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which CI/CD platform is used?",
+        "choices": [
+          {
+            "label": "Jenkins",
+            "isCorrect": false
+          },
+          {
+            "label": "Travis",
+            "isCorrect": false
+          },
+          {
+            "label": "Gitlab",
+            "isCorrect": false
+          },
+          {
+            "label": "Azure Dev/Ops",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "How much costs a VM created with Dev/Test Lab with our solution?",
+        "choices": [
+          {
+            "label": "10€ / VM / hour",
+            "isCorrect": false
+          },
+          {
+            "label": "5€ / VM / hour",
+            "isCorrect": false
+          },
+          {
+            "label": "2€ / VM / hour",
+            "isCorrect": false
+          },
+          {
+            "label": "Less than 1€ / VM / hour",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What type of application can be tested with this solution?",
+        "choices": [
+          {
+            "label": "OnPremise internet",
+            "isCorrect": false
+          },
+          {
+            "label": "OnPremise intranet",
+            "isCorrect": false
+          },
+          {
+            "label": "Public cloud & Private IaaS",
+            "isCorrect": false
+          },
+          {
+            "label": "All previous answers",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_CONTINUOUSTESTINGINTHECLOUD_DEV0_SEC0_OPS1_5sg298et66w8de29qdem4cp5j5598345cs75skm52zr8g6bb"
+  },
+  {
+    "id": "3576872kqj6dh494c8nd5b85wgn8gqwh48v6cj5ky2mpp364",
+    "title": "From Stone Age to Modernity : Moving a legacy application from manual deployment to DevOps",
+    "description": "15 years ago (sort of), out from nothing Concerto was born, and with every new version, the universe had to stop to allow it to be deployed. Nowadays, we have automatic deploy, no downtime, very reduced human interaction, and a lot of other perks that makes our DevOps life better. Have you listened to the talk given by ESMORIS Leonardo & MADUENO Javier? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "How was Concerto deployed at the very beginning?",
+        "choices": [
+          {
+            "label": "Copying the entire binary set",
+            "isCorrect": false
+          },
+          {
+            "label": "Copying DLLs with only the needed code",
+            "isCorrect": true
+          },
+          {
+            "label": "Using a GIT hook",
+            "isCorrect": false
+          },
+          {
+            "label": "With a .bat file",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What was the first approach to solve the Concerto deployment issues?",
+        "choices": [
+          {
+            "label": "Praying",
+            "isCorrect": false
+          },
+          {
+            "label": "Going to \"Copy the entire binaries\" mode",
+            "isCorrect": true
+          },
+          {
+            "label": "Hiring more skilled deployers",
+            "isCorrect": false
+          },
+          {
+            "label": "Not deploying it anymore",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In Concerto, what does it mean \"Base Configuration Database\"?",
+        "choices": [
+          {
+            "label": "A SQL database that contains schema and binaries changes",
+            "isCorrect": false
+          },
+          {
+            "label": "A SQL database that contains schema and binaries changes",
+            "isCorrect": false
+          },
+          {
+            "label": "XML files with the info about the environments and the countries",
+            "isCorrect": true
+          },
+          {
+            "label": "A click-bait to justify our salaries",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is \"Concerto installer tool\"?",
+        "choices": [
+          {
+            "label": "A tool to \"hide\" all task needed to deploy Concerto in a human friendly environment",
+            "isCorrect": true
+          },
+          {
+            "label": "A tool to replicate a Concerto instance in another environment",
+            "isCorrect": false
+          },
+          {
+            "label": "A tool used by the agents to install Concerto in their own machines",
+            "isCorrect": false
+          },
+          {
+            "label": "An AI tool that automatically detects that you needed Concerto in your machine and installs it",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "How is the Concerto DB being updated?",
+        "choices": [
+          {
+            "label": "Using scripts",
+            "isCorrect": true
+          },
+          {
+            "label": "Manually",
+            "isCorrect": false
+          },
+          {
+            "label": "Using a schema replicator tool",
+            "isCorrect": false
+          },
+          {
+            "label": "We drop the entire DB and recreate it again using scripts with no data",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What was the main benefit to Concerto when using CI/CD with Azure DevOps?",
+        "choices": [
+          {
+            "label": "No downtime deploy even during peak hours",
+            "isCorrect": true
+          },
+          {
+            "label": "Less money needed for deployers",
+            "isCorrect": false
+          },
+          {
+            "label": "The developers had less work to do and more free time",
+            "isCorrect": false
+          },
+          {
+            "label": "No benefit. It was just a money laundry topic",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What was the main need to be able to deploy Concerto with no downtime?",
+        "choices": [
+          {
+            "label": "Azure DevOps licenses",
+            "isCorrect": false
+          },
+          {
+            "label": "Better coding level",
+            "isCorrect": false
+          },
+          {
+            "label": "Deploying it out of work hours",
+            "isCorrect": false
+          },
+          {
+            "label": "Developers to have a \"backward compatible\" mindset",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_FROMSTONEAGETOMODERNITY_DEV1_SEC0_OPS0_upfc5p2u48br6v5uj9j62nz3498w9qnzf5z49662mp553gu4"
+  },
+  {
+    "id": "27zf25269528tmb9st73k8xi2jvfr5xxup8qw642736brss4",
+    "title": "Zero-Touch PIaaS to Production",
+    "description": "Deploy everything on Private IaaS from low level server configurations to business application without connecting once to the VM? How we integrated SaltStack, Azure DevOps and the Private IaaS into a 100% automated pipeline and transformed the Private IaaS into Private PaaS. Have you listened to the talk given by LEMARCHAND Thomas? If you succeed, you will get a bonus flag worth 1 point of Ops. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "How is called the SaltStack agent?",
+        "choices": [
+          {
+            "label": "mignon",
+            "isCorrect": false
+          },
+          {
+            "label": "007",
+            "isCorrect": false
+          },
+          {
+            "label": "minion",
+            "isCorrect": true
+          },
+          {
+            "label": "onion",
+            "isCorrect": false
+          },
+          {
+            "label": "nimion",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the templating language used by SaltStack?",
+        "choices": [
+          {
+            "label": "ninja",
+            "isCorrect": false
+          },
+          {
+            "label": "none",
+            "isCorrect": false
+          },
+          {
+            "label": "jinja",
+            "isCorrect": true
+          },
+          {
+            "label": "ERB",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which OS can SaltStack automate (directly or through proxy)?",
+        "choices": [
+          {
+            "label": "Linux",
+            "isCorrect": true
+          },
+          {
+            "label": "iOS",
+            "isCorrect": false
+          },
+          {
+            "label": "NX-OS",
+            "isCorrect": true
+          },
+          {
+            "label": "Windows",
+            "isCorrect": true
+          },
+          {
+            "label": "FreeBSD",
+            "isCorrect": true
+          },
+          {
+            "label": "Android",
+            "isCorrect": false
+          },
+          {
+            "label": "AIX",
+            "isCorrect": true
+          },
+          {
+            "label": "MacOS",
+            "isCorrect": true
+          },
+          {
+            "label": "JunOS",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "What technical stacks are already automated by AXA France and are available on the shelf for projects?",
+        "choices": [
+          {
+            "label": "NodeJS",
+            "isCorrect": true
+          },
+          {
+            "label": "Mongodb",
+            "isCorrect": false
+          },
+          {
+            "label": "Apache Web Server",
+            "isCorrect": true
+          },
+          {
+            "label": "Tomcat",
+            "isCorrect": true
+          },
+          {
+            "label": "IIS / .NET & .NET Core",
+            "isCorrect": true
+          },
+          {
+            "label": "IIS/ static web site",
+            "isCorrect": true
+          },
+          {
+            "label": "Nginx",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In AXA France automated IIS, which HTTP request methods are allowed? (refer to https://github.axa.com/axa-france/iis-states)",
+        "choices": [
+          {
+            "label": "POST",
+            "isCorrect": true
+          },
+          {
+            "label": "OPTIONS",
+            "isCorrect": true
+          },
+          {
+            "label": "TRACE",
+            "isCorrect": false
+          },
+          {
+            "label": "GET",
+            "isCorrect": true
+          },
+          {
+            "label": "LIST",
+            "isCorrect": false
+          },
+          {
+            "label": "PUT",
+            "isCorrect": true
+          },
+          {
+            "label": "PATCH",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "How many tasks in Azure DevOps release pipeline are needed to automate a release with SaltStack if you deploy only one application?",
+        "choices": [
+          {
+            "label": "1",
+            "isCorrect": false
+          },
+          {
+            "label": "2",
+            "isCorrect": true
+          },
+          {
+            "label": "3",
+            "isCorrect": false
+          },
+          {
+            "label": "5",
+            "isCorrect": false
+          },
+          {
+            "label": "18",
+            "isCorrect": false
+          },
+          {
+            "label": "42",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which Private IaaS patterns do you need to automate any application with SaltStack (in SE)?",
+        "choices": [
+          {
+            "label": "SE_IaaS_LNX_SI_AI_APACHE_RH7",
+            "isCorrect": false
+          },
+          {
+            "label": "SE_IaaS_LNX_SI_A2_RH7",
+            "isCorrect": true
+          },
+          {
+            "label": "SE_IaaS_LNX_SI_A9_JBOSS7_RH7",
+            "isCorrect": false
+          },
+          {
+            "label": "SE_IaaS_LNX_SI_AI_APACHE_RH7",
+            "isCorrect": false
+          },
+          {
+            "label": "SE_IaaS_WIN_SI_AH_IIS_WIN2012",
+            "isCorrect": false
+          },
+          {
+            "label": "SE_IaaS_WIN_SI_A0_WIN2012",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "SaltStack states are...",
+        "choices": [
+          {
+            "label": "Written in Powershell",
+            "isCorrect": false
+          },
+          {
+            "label": "A description of a single configuration",
+            "isCorrect": true
+          },
+          {
+            "label": "Written in YAML",
+            "isCorrect": true
+          },
+          {
+            "label": "Idempotent",
+            "isCorrect": true
+          },
+          {
+            "label": "Different in each environment",
+            "isCorrect": false
+          },
+          {
+            "label": "Execution scripts",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_ZEROTOUCHPIAASTOPRODUCTION_DEV0_SEC0_OPS1_nd5i7an28ryru6bz3w6j737v89694k6uv67j5afa794ah7c3"
+  },
+  {
+    "id": "j2s8i6327dcfhcy27hr22va522e5p6r7mm23s65swhd397e4",
+    "title": "Clean Code",
+    "description": "This quiz is about the Clean Code approach. If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "What does SOLID means?",
+        "choices": [
+          {
+            "label": "Single Responsibility/Open-Close Principle/Liskov substitution principle/Interface Segration Principle/Dependency Inversion Principle",
+            "isCorrect": true
+          },
+          {
+            "label": "Simple/Opinionated/Less/Ideal/Double",
+            "isCorrect": false
+          },
+          {
+            "label": "Single Responsibility/Opinionated /Liskov substitution principle/Interface/Dependency management",
+            "isCorrect": false
+          },
+          {
+            "label": "Several/Options/Limited/Ideal/Data",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "KISS and DRY are incompatibles?",
+        "choices": [
+          {
+            "label": "Yes",
+            "isCorrect": false
+          },
+          {
+            "label": "No",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Single Responsibility pattern is...",
+        "choices": [
+          {
+            "label": "The other name of Singleton pattern",
+            "isCorrect": false
+          },
+          {
+            "label": "Implement a class, a function or a method that have one and only one responsability",
+            "isCorrect": true
+          },
+          {
+            "label": "A class implementing a single interface",
+            "isCorrect": false
+          },
+          {
+            "label": "A class that don't use polymorphism",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "The book Clean Code, A Handbook of Agile Software Craftsmanship was written by...",
+        "choices": [
+          {
+            "label": "Robert Downey Junior",
+            "isCorrect": false
+          },
+          {
+            "label": "Ada Lovelace",
+            "isCorrect": false
+          },
+          {
+            "label": "Bill Gates",
+            "isCorrect": false
+          },
+          {
+            "label": "Robert C. Martin",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Which practices helps to write clean code?",
+        "choices": [
+          {
+            "label": "TDD",
+            "isCorrect": true
+          },
+          {
+            "label": "BDD",
+            "isCorrect": true
+          },
+          {
+            "label": "DDD",
+            "isCorrect": true
+          },
+          {
+            "label": "ATDD",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Clean Code...",
+        "choices": [
+          {
+            "label": "is easily understandable by each developer",
+            "isCorrect": true
+          },
+          {
+            "label": "has no functional issues",
+            "isCorrect": false
+          },
+          {
+            "label": "use the right abstractions",
+            "isCorrect": true
+          },
+          {
+            "label": "is easily extensible",
+            "isCorrect": true
+          },
+          {
+            "label": "is easily testable",
+            "isCorrect": true
+          },
+          {
+            "label": "is written with DDD approach",
+            "isCorrect": false
+          },
+          {
+            "label": "is performant",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which of these 4 functions is the more \"Clean Code\" compliant?",
+        "choices": [
+          {
+            "label": "public fonction priceIncrement()",
+            "isCorrect": false
+          },
+          {
+            "label": "public fonction increasePrice()",
+            "isCorrect": true
+          },
+          {
+            "label": "public fonction priceInc()",
+            "isCorrect": false
+          },
+          {
+            "label": "public fonction incPrice()",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Which design pattern exists?",
+        "choices": [
+          {
+            "label": "Design pattern Decorator",
+            "isCorrect": true
+          },
+          {
+            "label": "Design pattern Proxy",
+            "isCorrect": true
+          },
+          {
+            "label": "Design pattern Observer",
+            "isCorrect": true
+          },
+          {
+            "label": "Design pattern Improvement",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What are the 3 steps of a good unit test?",
+        "choices": [
+          {
+            "label": "Arrange / Act / Assert",
+            "isCorrect": true
+          },
+          {
+            "label": "Act / Arrange / Assert",
+            "isCorrect": false
+          },
+          {
+            "label": "Arrange / Assert / Act",
+            "isCorrect": false
+          },
+          {
+            "label": "Act / Arrange / Assert",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_CLEANCODE_DEV1_SEC0_OPS0_g267t87uqfaj4243eaz2h74p6jct222un5t76p3s27v4va2i"
+  },
+  {
+    "id": "95w63ms2w84i5rmm7m837857i5yt67ffcr8pynktk9339rd6",
+    "title": "Date format",
+    "description": "How much do you know about date formats? If you succeed, you will get a bonus flag worth 1 point of Dev. Good luck!",
+    "links": [],
+    "questions": [
+      {
+        "label": "In Javascript, which date is displayed in the console ? <br/> var date = new Date(2019, 1, 30); <br/> date.setMonth(1); <br/> console.log(date);",
+        "choices": [
+          {
+            "label": "Sat Feb 02 2019",
+            "isCorrect": true
+          },
+          {
+            "label": "Wed Jan 30 2019",
+            "isCorrect": false
+          },
+          {
+            "label": "Sat Mar 02 2019",
+            "isCorrect": false
+          },
+          {
+            "label": "Thu Feb 28 2019",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "In Javascript, which date is displayed in the console ? <br/> var date = new Date(2019, 1, 30); <br/> date.setMonth(2); <br/> console.log(date);",
+        "choices": [
+          {
+            "label": "Sat Feb 02 2019",
+            "isCorrect": false
+          },
+          {
+            "label": "Sat Mar 02 2019",
+            "isCorrect": true
+          },
+          {
+            "label": "Fri Feb 30 2019",
+            "isCorrect": false
+          },
+          {
+            "label": "Fri Mar 01 2019",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What happens on the 19th january 2038?",
+        "choices": [
+          {
+            "label": "The first man walks on mars",
+            "isCorrect": false
+          },
+          {
+            "label": "POSIX date overflow",
+            "isCorrect": true
+          },
+          {
+            "label": "On some systems, it will be 13th december 1901",
+            "isCorrect": true
+          },
+          {
+            "label": "I'll be 100 years old",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "After moving a web application from private server to public cloud server, you need to care about...",
+        "choices": [
+          {
+            "label": "date at midnight",
+            "isCorrect": true
+          },
+          {
+            "label": "the hoover plug",
+            "isCorrect": false
+          },
+          {
+            "label": "public cloud server is UTC time based",
+            "isCorrect": true
+          },
+          {
+            "label": "my birthdate is not the the day before",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "How can I easily analyse performance issues on a system hosted in public cloud, private cloud and private server...",
+        "choices": [
+          {
+            "label": "Use a product like Dynatrace, Datadog or AppDynamics",
+            "isCorrect": true
+          },
+          {
+            "label": "Use correlation identifier",
+            "isCorrect": true
+          },
+          {
+            "label": "Merge all files in one",
+            "isCorrect": false
+          },
+          {
+            "label": "Search for the same timestamp on all log files",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "I have a variable day set to 31, which statement works?",
+        "choices": [
+          {
+            "label": "C# : new DateTime(2019, 2, day +1);",
+            "isCorrect": false
+          },
+          {
+            "label": "Java : Calendar calendar = Calendar.getInstance(); calendar.set(2019, 1, day + 1);",
+            "isCorrect": true
+          },
+          {
+            "label": "JS : new Date(2019, 1, day + 1);",
+            "isCorrect": true
+          },
+          {
+            "label": "Python : datetime.datetime(year=2019, month=2, day=day+1)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is the estimated cost of the Y2K bug fixation?",
+        "choices": [
+          {
+            "label": "$50.000.000.000",
+            "isCorrect": false
+          },
+          {
+            "label": "$100.000.000.000",
+            "isCorrect": false
+          },
+          {
+            "label": "$600.000.000.000",
+            "isCorrect": true
+          },
+          {
+            "label": "$1.000.000.000.000",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "The API of my favorite bank is hosted in Paris. Unfortunately, it only takes the input effective transfer date format as String \"YYYYmmDD\". What are the risks?",
+        "choices": [
+          {
+            "label": "A transfer realized in New-York at 10:00PM could be considered as future transfer",
+            "isCorrect": false
+          },
+          {
+            "label": "A transfer realized in Tokyo at 10:00PM could crash because considered as past transfer",
+            "isCorrect": false
+          },
+          {
+            "label": "A transfer realized in New-York at 10:00PM could crash because considered as past transfer",
+            "isCorrect": true
+          },
+          {
+            "label": "A transfer realized in Tokyo at 10:00PM could be considered as future transfer",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does the following cron table command : 00 */6 * * *?",
+        "choices": [
+          {
+            "label": "Run task every odd days at 6AM",
+            "isCorrect": false
+          },
+          {
+            "label": "Run task every days at 6AM",
+            "isCorrect": false
+          },
+          {
+            "label": "Run task every 6hours",
+            "isCorrect": true
+          },
+          {
+            "label": "Run task every 6hours the second half of the month",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What does Epoch mean?",
+        "choices": [
+          {
+            "label": "It's an Emacs family text editor",
+            "isCorrect": true
+          },
+          {
+            "label": "It's the initial date used by operating systems to mesure time",
+            "isCorrect": true
+          },
+          {
+            "label": "It's an unlimited software licence",
+            "isCorrect": false
+          },
+          {
+            "label": "It's a Marvel caracter",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Congratulations! Here is your flag: QUIZ_DATEFORMAT_DEV1_SEC0_OPS0_999j4ktks7w5qq7qtg3w7gi3n52767rc529i52efss43y72r"
+  }
+]

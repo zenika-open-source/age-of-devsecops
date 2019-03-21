@@ -1,0 +1,10 @@
+server {
+    listen       443 ssl;
+    ssl_certificate     /etc/nginx/ssl/cert.crt;
+    ssl_certificate_key /etc/nginx/ssl/cert.key;
+
+    location / {
+        proxy_pass  http://{{node1_ip}}:8080;
+    }
+}
+

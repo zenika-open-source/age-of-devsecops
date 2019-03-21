@@ -1,0 +1,241 @@
+version: 2
+jobs:
+
+  build-game-engine:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "game-engine/build.gradle" }}
+            - v1-dependencies-
+      - run:
+          name: Download dependencies
+          working_directory: game-engine
+          command: ./gradlew dependencies
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "game-engine/build.gradle" }}
+      - run:
+          name: Run tests
+          working_directory: game-engine
+          command: ./gradlew test
+      - run:
+          name: Build App
+          working_directory: game-engine
+          command: ./gradlew build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - game-engine/build/libs/game-engine.jar
+            - game-engine/Dockerfile
+            - docker-compose-game-engine.yml
+
+  build-score-board:
+    docker:
+      - image: circleci/node:8.10-browsers
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "score-board/package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Download dependencies
+          working_directory: score-board
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "score-board/package.json" }}
+      - run:
+          name: Run tests
+          working_directory: score-board
+          command: yarn test --watch=false --progress=false
+      - run:
+          name: Build the static content
+          working_directory: score-board
+          command: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - score-board/dist/score-board/
+            - score-board/Dockerfile
+            - score-board/nginx.conf
+
+  build-quiz:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "quiz/build.gradle" }}
+            - v1-dependencies-
+      - run:
+          name: Download dependencies
+          working_directory: quiz
+          command: ./gradlew dependencies
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "quiz/build.gradle" }}
+      - run:
+          name: Run tests
+          working_directory: quiz
+          command: ./gradlew test
+      - run:
+          name: Build App
+          working_directory: quiz
+          command: ./gradlew build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - quiz/build/libs/quiz.jar
+            - quiz/Dockerfile
+            - docker-compose-quiz.yml
+
+  dockerize-game-engine:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - setup_remote_docker
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build docker image
+          working_directory: game-engine
+          command: docker build -t zenikalabs/ageofdevsecops-game-engine:${CIRCLE_WORKFLOW_ID} .
+      - run:
+          name: Push docker image
+          command: |
+            docker login -u ${DOCKERHUB_LOGIN} -p ${DOCKERHUB_PASSWORD}
+            docker push zenikalabs/ageofdevsecops-game-engine:${CIRCLE_WORKFLOW_ID}
+
+
+  dockerize-score-board:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - setup_remote_docker
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build docker image
+          working_directory: score-board
+          command: docker build -t zenikalabs/ageofdevsecops-score-board:${CIRCLE_WORKFLOW_ID} .
+      - run:
+          name: Push docker image
+          command: |
+            docker login -u ${DOCKERHUB_LOGIN} -p ${DOCKERHUB_PASSWORD}
+            docker push zenikalabs/ageofdevsecops-score-board:${CIRCLE_WORKFLOW_ID}
+
+  dockerize-quiz:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - setup_remote_docker
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build docker image
+          working_directory: quiz
+          command: docker build -t zenikalabs/ageofdevsecops-quiz:${CIRCLE_WORKFLOW_ID} .
+      - run:
+          name: Push docker image
+          command: |
+            docker login -u ${DOCKERHUB_LOGIN} -p ${DOCKERHUB_PASSWORD}
+            docker push zenikalabs/ageofdevsecops-quiz:${CIRCLE_WORKFLOW_ID}
+
+  deploy-game-engine-score-board:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "60:24:9d:84:fa:7a:ba:dc:5c:a0:5e:78:af:91:21:92"
+      - run:
+          name: Deploy on remote machine
+          command: |
+            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-game-engine.yml ubuntu@scoreboard.ageofdevsecops.com:~
+            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@scoreboard.ageofdevsecops.com " \
+                export CIRCLE_WORKFLOW_ID=${CIRCLE_WORKFLOW_ID}
+                export DATASOURCE_URL=${DATASOURCE_URL}
+                export DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
+                export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+                export WEB_PASSWORD=${WEB_PASSWORD}
+                export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+                export DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
+                sudo --preserve-env docker-compose -f docker-compose-game-engine.yml pull \
+                && sudo --preserve-env docker-compose -p game-engine -f docker-compose-game-engine.yml up -d --force-recreate \
+            "
+
+  deploy-quiz:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/labs-age-of-devsecops
+    steps:
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "60:24:9d:84:fa:7a:ba:dc:5c:a0:5e:78:af:91:21:92"
+      - run:
+          name: Deploy on remote machine
+          command: |
+            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-quiz.yml ubuntu@quiz.ageofdevsecops.com:~
+            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@quiz.ageofdevsecops.com " \
+                export CIRCLE_WORKFLOW_ID=${CIRCLE_WORKFLOW_ID}
+                sudo --preserve-env docker-compose -f docker-compose-quiz.yml pull \
+                && sudo --preserve-env docker-compose -p quiz -f docker-compose-quiz.yml up -d --force-recreate \
+            "
+
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - build-game-engine
+      - build-score-board
+      - build-quiz
+      - dockerize-game-engine:
+          requires:
+            - build-game-engine
+          filters:
+            branches:
+              only: master
+      - dockerize-score-board:
+          requires:
+            - build-score-board
+          filters:
+            branches:
+              only: master
+      - dockerize-quiz:
+          requires:
+            - build-quiz
+          filters:
+            branches:
+              only: master
+      - deploy-game-engine-score-board:
+          requires:
+            - dockerize-game-engine
+            - dockerize-score-board
+          filters:
+            branches:
+              only: master
+      - deploy-quiz:
+          requires:
+            - dockerize-quiz
+          filters:
+            branches:
+              only: master

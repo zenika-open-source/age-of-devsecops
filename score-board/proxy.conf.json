@@ -1,0 +1,21 @@
+{
+  "/api": {
+    "target": {
+      "host": "localhost",
+      "protocol": "http",
+      "port": 8080
+    },
+    "secure": false
+  },
+  "/onboarding": {
+    "target": {
+      "host": "localhost",
+      "protocol": "http",
+      "port": 8080
+    },
+    "secure": false,
+    "pathRewrite": {
+      "^/onboarding": ""
+    }
+  }
+}

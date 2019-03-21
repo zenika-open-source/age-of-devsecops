@@ -1,0 +1,38 @@
+<div class="main">
+  <table>
+    <colgroup>
+      <col span="1" style="width: 36px;">
+      <col span="1" style="width: 216px;">
+      <col span="1" style="width: 35%;">
+      <col span="1" style="width: 10%;">
+      <col span="1" style="width: 10%;">
+      <col span="1" style="width: 10%;">
+    </colgroup>
+
+    <thead>
+    <tr class="header">
+      <th></th>
+      <th>Planet</th>
+      <th>Score</th>
+      <th class="center">Dev</th>
+      <th class="center">Sec</th>
+      <th class="center">Ops</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let playerScore of playerScores; let i = index" class="row">
+      <td>{{ i + 1 }}.</td>
+      <td>{{ toSnakeCase(playerScore.playerId) }}</td>
+      <td class="flex">
+        <div class="score">{{ playerScore.score }}</div>
+        <div class="progression">(+{{ playerScore.progression }})</div>
+      </td>
+      <td class="center">{{ playerScore.devPoint }}</td>
+      <td class="center">{{ playerScore.secPoint }}</td>
+      <td class="center">{{ playerScore.opsPoint }}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

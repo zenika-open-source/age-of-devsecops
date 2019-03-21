@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Enter_The_Grid";
+  src: url(./assets/fonts/Enter_the_Grid.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "ZCOOL";
+  src: url(./assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}

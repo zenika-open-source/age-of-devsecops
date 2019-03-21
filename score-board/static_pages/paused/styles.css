@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Enter_The_Grid";
+  src: url(./fonts/Enter_the_Grid.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+html, body {
+  margin: 0;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+}
+
+.main .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .header .title {
+  height: 15vh;
+}
+
+.main .content {
+  padding-top: 520px;
+  text-align: center;
+  color: white;
+  font-size: 120px;
+  font-family: Enter_The_Grid;
+  animation: blink 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

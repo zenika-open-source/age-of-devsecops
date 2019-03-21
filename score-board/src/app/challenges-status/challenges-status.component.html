@@ -1,0 +1,33 @@
+<div class="main">
+  <table>
+    <colgroup>
+      <col span="1" style="width: 50px;">
+      <col span="1" style="width: 8%;">
+    </colgroup>
+
+    <thead>
+    <tr class="header">
+      <th></th>
+      <th></th>
+      <th *ngFor="let challengeName of challengeNames" class="center">{{challengeName}}</th>
+      <th class="center">Quizzes &amp; workshops</th>
+      <th class="center">Hidden flags</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let playerRow of playerRows; let i = index" class="row">
+      <td>{{ i + 1 }}.</td>
+      <td>{{ toSnakeCase(playerRow.playerId) }}</td>
+      <td *ngFor="let challengeName of challengeNames" align="center">
+        <div *ngIf="playerRow.challengesStatuses[challengeName]" class="completed">
+          <img src="../assets/images/completed.svg">
+        </div>
+      </td>
+      <td align="center">{{ playerRow.publicFlags }}/{{ playerRow.totalPublicFlags }}</td>
+      <td align="center">{{ playerRow.secretFlags }}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

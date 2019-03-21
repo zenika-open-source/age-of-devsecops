@@ -1,0 +1,61 @@
+.main {
+  font-family: "ZCOOL";
+  color: white;
+  padding: 0 15px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .header {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    height: 70px;
+
+    .center {
+      text-align: center;
+    }
+
+    th {
+      padding: 16px 10px;
+      border-bottom: 1px solid #FFFFFF60;
+    }
+  }
+
+  .row {
+    font-size: 25px;
+    line-height: 30px;
+
+    .flex {
+      display: flex;
+    }
+
+    &:nth-child(even) {
+      background-color: #FFFFFF20;
+    }
+
+    .completed {
+      width: 65px;
+      height: 22px;
+      border-radius: 30px;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    td:nth-child(1) {
+      padding-right: 15px;
+      text-align: right;
+    }
+  }
+}
+

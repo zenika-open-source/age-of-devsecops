@@ -1,0 +1,13 @@
+amazon:
+  ec2.region: eu-west-1
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: prod
+  datasource:
+    initialization-mode: always
+  security:
+    user:
+      name: admin

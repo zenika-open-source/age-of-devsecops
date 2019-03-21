@@ -1,0 +1,70 @@
+.main {
+  color: white;
+  padding: 15px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .header {
+    font-family: "Enter_The_Grid";
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-align: left;
+
+    th {
+      padding: 10px 0;
+      border-bottom: 1px solid #FFFFFF60;
+    }
+  }
+
+  .row {
+    font-family: "ZCOOL";
+    font-size: 25px;
+    line-height: 30px;
+
+    .flex {
+      display: flex;
+    }
+
+    .score {
+      flex: 1;
+    }
+
+    .progression {
+      flex: 1
+    }
+
+    &:nth-child(even) {
+      background-color: #FFFFFF20;
+    }
+
+    &:nth-child(1) {
+      font-size: 35px;
+      line-height: 38px;
+    }
+
+    &:nth-child(2) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+
+    &:nth-child(3) {
+      font-size: 28px;
+      line-height: 31px;
+    }
+
+    td:nth-child(1) {
+      padding-right: 15px;
+      text-align: right;
+    }
+  }
+
+}
+

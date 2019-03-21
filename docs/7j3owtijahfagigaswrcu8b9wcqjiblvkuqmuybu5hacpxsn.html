@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Load Balancer Challenge</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to the Load Balancer challenge !</h1>
+    </div>
+
+    <div class="content">
+        <p>Your team has been given a set of virtual machines to code, build and deploy your application. They are
+            organized
+            following this architecture:</p>
+
+        <code>
+                Your node1 (app) <---(http)---.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' --- Your
+                front <---(http)--- Our watchers<br>
+                Your node2 (spare)
+            </code>
+
+        <p>Unfortunately, VMs, networks and user activity are quite unpredictable at the other end of the galaxy...
+            Your
+            mission is to prevent any downtime by configuring a load balancer on your front.</p>
+
+        <p>By scanning cosmic waves, your spies have found an ancient document named
+            "<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html" target="_blank">RTFM</a>" which
+            seems
+            related to this subject. Their advice is to put this architecture into place:</p>
+
+        <code>
+                Your node1 (app) <---(http)---.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| --- Your
+                front <---(http)--- Our watchers<br>
+                Your node2 (app) <---(http)---'
+            </code>
+
+        <p>Refer to the guide in your Starter Kit for more information about IP, SSH keys, etc.</p>
+    </div>
+
+
+    
+<footer class="footer">
+</footer>
+
+</body>
+
+</html>

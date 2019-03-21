@@ -1,0 +1,200 @@
+---
+- name: Setup build instance
+  hosts: all
+  remote_user: ubuntu
+  vars:
+    TEAM_NAME: "{{lookup('env', 'TEAM_NAME')}}"
+    password: "{{lookup('env', 'PASSWORD')}}"
+
+
+  tasks:
+    - name: "Install various dependencies"
+      become: yes
+      apt: name={{item}} state=present update_cache=yes
+      with_items:
+        - openjdk-8-jdk
+        - nginx
+        - unzip
+        - apt-transport-https
+        - ca-certificates
+        - gnupg-agent
+        - software-properties-common
+        - git-core
+
+    - name: "Add sonar group"
+      become: yes
+      group:
+        name: sonar
+        state: present
+
+    - name: "Add sonar user"
+      become: yes
+      user:
+        name: sonar
+        group: sonar
+        create_home: no
+
+    - name: "Create sonar repo"
+      become: yes
+      file:
+        path: /opt/sonarqube
+        state: directory
+
+    - name: "Fetch sonar sources"
+      get_url:
+        url: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.7.6.zip
+        dest: /tmp/sonar.zip
+
+    - name: "Unzip sonar sources"
+      become: yes
+      unarchive:
+        remote_src: yes
+        src: /tmp/sonar.zip
+        dest: /opt/sonarqube
+        mode: u=rwx,g=r,o=r
+        owner: sonar
+        group: sonar
+
+    - name: "Replace sonar script user"
+      become: yes
+      shell: sed -i "s/#RUN_AS_USER=/RUN_AS_USER=sonar/g" /opt/sonarqube/sonarqube-6.7.6/bin/linux-x86-64/sonar.sh
+
+    - name: "Replace sonar config"
+      become: yes
+      shell:  sed -i "s/#sonar.web.context=/sonar.web.context=\/sonar/g" /opt/sonarqube/sonarqube-6.7.6/conf/sonar.properties
+
+    - name: "Add sonar service file"
+      become: yes
+      copy:
+        src: files/sonar.service
+        dest: /etc/systemd/system/sonar.service
+
+    - name: "Start sonar service"
+      become: yes
+      systemd:
+        state: restarted
+        name: sonar
+        daemon_reload: yes
+
+    - name: "Delete old default nginx conf"
+      become: yes
+      file:
+        state: absent
+        path: /etc/nginx/sites-enabled/default
+
+    - name: "Copy nginx config"
+      become: yes
+      copy:
+        src: files/nginx_build.conf
+        dest: /etc/nginx/conf.d/load-balancing.conf
+
+    - name: "Start nginx"
+      become: yes
+      systemd:
+        state: restarted
+        name: nginx
+        daemon_reload: yes
+
+    - name: "Add Docker GPG key"
+      become: yes
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+
+    - name: "Add Docker APT repository"
+      become: yes
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+        state: present
+
+    - name: "Install Docker package"
+      become: yes
+      apt:
+        name: docker-ce
+
+    - name: "Create git folder"
+      file:
+        path: ~/ugly-system.git
+        state: directory
+
+    - name: "Configure git"
+      shell: "cd ~/ugly-system.git/ && git init --bare"
+
+    - name: "Add Jenkins GPG key"
+      become: yes
+      apt_key:
+        url: https://pkg.jenkins.io/debian/jenkins.io.key
+
+    - name: "Add Jenkins APT repository"
+      become: yes
+      apt_repository:
+        repo: deb https://pkg.jenkins.io/debian-stable binary/
+        state: present
+
+    - name: "Install Jenkins package"
+      become: yes
+      apt:
+        name: jenkins
+        update_cache: yes
+
+    - name: "Add jenkins to docker group"
+      become: yes
+      shell: "usermod -a -G docker jenkins"
+
+    - name: "Create jenkins pipeline folder"
+      become: yes
+      become_user: jenkins
+      file:
+        path: /var/lib/jenkins/jobs/pipeline
+        state: directory
+
+    - name: "Copy build config"
+      become: yes
+      become_user: jenkins
+      copy:
+        src: files/config.xml
+        dest: /var/lib/jenkins/jobs/pipeline/config.xml
+
+    - name: "Configure jenkins listener"
+      become: yes
+      shell: sed -i 's/JENKINS_ARGS="--webroot=\/var\/cache\/$NAME\/war --httpPort=$HTTP_PORT"/JENKINS_ARGS="--webroot=\/var\/cache\/$NAME\/war --httpPort=$HTTP_PORT --prefix=$PREFIX"/g' /etc/default/jenkins
+
+    - name: "Remove graphical jenkins setup"
+      become: yes
+      shell: sed -i 's/JAVA_ARGS="-Djava.awt.headless=true"/JAVA_ARGS="-Djava.awt.headless=true -Djenkins.install.runSetupWizard=false"/g' /etc/default/jenkins
+
+    - name: "Start & Enable Jenkins"
+      become: yes
+      systemd:
+        name: jenkins
+        state: restarted
+        enabled: true
+
+    - name: "Sleep for 30 seconds and continue with play"
+      wait_for: timeout=30
+
+    - name: "Add sonar user"
+      uri:
+        url: http://localhost/sonar/api/users/create
+        method: POST
+        user: admin
+        password: admin
+        body: login={{ TEAM_NAME }}&name={{ TEAM_NAME }}&email=&password={{ password }}&scmAccount=
+        force_basic_auth: yes
+
+    - name: "Add sonar user to admin group"
+      uri:
+        url: http://localhost/sonar/api/user_groups/add_user
+        method: POST
+        user: admin
+        password: admin
+        body: login={{ TEAM_NAME }}&id=1
+        force_basic_auth: yes
+        status_code: 204
+
+    - name: "Get init password Jenkins"
+      become: yes
+      shell: "cat /var/lib/jenkins/secrets/initialAdminPassword"
+      changed_when: false
+      register: result
+
+    - local_action: copy content={{ result.stdout }} dest=./jenkins_{{ TEAM_NAME }}.password

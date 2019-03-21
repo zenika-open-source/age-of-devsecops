@@ -1,0 +1,40 @@
+---
+- name: Setup loadbalancer instance
+  hosts: all
+  remote_user: ubuntu
+  vars:
+    node1_ip: "{{lookup('env', 'NODE1_IP')}}"
+
+
+  tasks:
+    - name: "Install nginx"
+      become: yes
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+
+    - name: "Delete old default conf"
+      become: yes
+      file:
+        state: absent
+        path: /etc/nginx/sites-enabled/default
+
+    - name: "Copy nginx config"
+      become: yes
+      copy:
+        src: files/certificates/
+        dest: /etc/nginx/ssl/
+
+    - name: "Copy nginx config"
+      become: yes
+      template:
+        src: template/nginx_lb.conf.j2
+        dest: /etc/nginx/conf.d/load-balancing.conf
+
+    - name: "Restart nginx"
+      become: yes
+      systemd:
+        name: nginx
+        state: restarted
+        enabled: true

@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  quiz:
+    image: zenikalabs/ageofdevsecops-quiz:${CIRCLE_WORKFLOW_ID}
+    ports:
+      - "80:8080"

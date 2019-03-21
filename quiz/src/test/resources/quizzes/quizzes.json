@@ -1,0 +1,91 @@
+[
+  {
+    "id": "123",
+    "title": "MyQuiz",
+    "description": "Welcome to my quiz",
+    "links": [
+      "https://labs.zenika.com",
+      "https://romain.vernoux.fr"
+    ],
+    "questions": [
+      {
+        "label": "What is Java?",
+        "choices": [
+          {
+            "label": "A programming language",
+            "isCorrect": true
+          },
+          {
+            "label": "An island",
+            "isCorrect": true
+          },
+          {
+            "label": "The same thing as JavaScript",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is JavaScript?",
+        "choices": [
+          {
+            "label": "A programming language",
+            "isCorrect": true
+          },
+          {
+            "label": "An island",
+            "isCorrect": false
+          },
+          {
+            "label": "The same thing as Java",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Well done champion! Here is your code: 123456789"
+  },
+  {
+    "id": "abc",
+    "title": "MyOtherQuizz",
+    "description": "Welcome to my other quiz",
+    "links": [],
+    "questions": [
+      {
+        "label": "What is Java?",
+        "choices": [
+          {
+            "label": "A programming language",
+            "isCorrect": true
+          },
+          {
+            "label": "An island",
+            "isCorrect": true
+          },
+          {
+            "label": "The same thing as JavaScript",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "What is JavaScript?",
+        "choices": [
+          {
+            "label": "A programming language",
+            "isCorrect": true
+          },
+          {
+            "label": "An island",
+            "isCorrect": false
+          },
+          {
+            "label": "The same thing as Java",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": "Well done champion! Here is your code: 123456789"
+  }
+]

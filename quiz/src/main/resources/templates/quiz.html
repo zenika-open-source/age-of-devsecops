@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--/*@thymesVar id="quiz" type="com.zenika.quiz.view.QuizView"*/-->
+<!--/*@thymesVar id="responseSheet" type="com.zenika.quiz.view.ResponseSheetModel"*/-->
+<!--/*@thymesVar id="result" type="java.lang.String"*/-->
+<head>
+    <title th:text="${quiz.title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+
+<div class="header">
+    <h1 th:text="${quiz.title}"></h1>
+</div>
+
+<form action="#" th:action="@{/quizzes/{id}(id=${quiz.id})}" th:object="${responseSheet}" method="post">
+
+    <div class="content">
+        <h2>Information</h2>
+        <p th:text="${quiz.description}"></p>
+        <th:block th:if="${not #lists.isEmpty(quiz.links)}">
+            <p>If you are not familiar with this topic, you will find useful information here:</p>
+            <ul>
+                <li th:each="link : ${quiz.links}">
+                    <a th:href="${link}" th:text="${link}"></a>
+                </li>
+            </ul>
+        </th:block>
+    </div>
+    <div class="content quiz">
+        <h2>Quiz</h2>
+        <th:block th:each="question,questionIter : ${quiz.questions}">
+            <h3 th:utext="${question.label}"></h3>
+            <ul>
+                <li th:each="choice, choiceIter : ${question.choices}">
+                    <input type="checkbox" th:id="'responses_' + ${questionIter.index} + '_' + ${choiceIter.index}"
+                           th:field="*{responses[__${questionIter.index}__].choices}"
+                           th:value="${choiceIter.index}"/>
+                    <label th:for="'responses_' + ${questionIter.index} + '_' + ${choiceIter.index}"
+                           th:text="${choice}"></label>
+                </li>
+            </ul>
+            <hr/>
+        </th:block>
+
+        <div class="result" th:if="${result!=null}">
+            <h2>Result</h2>
+            <h3 th:text="${result}"></h3>
+        </div>
+
+        <div class="submit-container">
+            <button type="submit" name="Submit">Submit</button>
+        </div>
+    </div>
+
+</form>
+
+<script th:inline="javascript">
+    if (/*[[${result}]]*/ '') {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>

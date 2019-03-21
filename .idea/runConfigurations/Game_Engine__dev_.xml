@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Game Engine (dev)" type="JetRunConfigurationType" factoryName="Kotlin">
+    <module name="com.zenika.game-engine.main" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <option name="PASS_PARENT_ENVS" value="true" />
+    <option name="MAIN_CLASS_NAME" value="com.zenika.ageofdevsecops.AgeOfDevSecOpsApplicationKt" />
+    <option name="WORKING_DIRECTORY" value="" />
+    <envs>
+      <env name="SPRING_DATASOURCE_URL" value="jdbc:mysql://localhost:3306/labs_age_of_devsecops" />
+      <env name="SPRING_DATASOURCE_USERNAME" value="game_scores" />
+      <env name="SPRING_DATASOURCE_PASSWORD" value="password" />
+      <env name="SPRING_SECURITY_USER_PASSWORD" value="game_engine_password" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

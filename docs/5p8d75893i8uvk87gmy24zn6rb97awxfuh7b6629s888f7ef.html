@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Spring Actuator Challenge</title>
+</head>
+
+<body>
+<div class="header">
+    <h1>Welcome to the Spring Actuator challenge!</h1>
+</div>
+
+<div class="content">
+
+    <p>Spring Actuator exposes many <a
+            href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html"
+            target="_blank">metrics</a> about the state of your application, but they contain too much sensitive
+        information.</p>
+
+    <p>You must take action in order for these information not to be available to the outside.</p>
+
+    <p>IMPORTANT: do not stop exposing the <code>/actuator/logfile</code> and <code>/actuator/health</code> endpoints,
+        our probes use them to measure your progress :)</p>
+
+    <p>Refer to the guide in your Starter Kit for more information about IP, SSH keys, etc.</p>
+</div>
+
+<footer class="footer">
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="header">
+    <img src="assets/images/header.svg" class="title">
+  </div>
+
+  <div class="container" [ngClass]="{'hidden': showChallenges}">
+    <app-planets class="block" [playerScores]="playerScores"></app-planets>
+    <app-leader-board class="block" [playerScores]="playerScores"></app-leader-board>
+  </div>
+
+  <div class="container" [ngClass]="{'hidden': !showChallenges}">
+    <app-challenges-status class="block" [playerChallengesStatus]="playerChallengesStatus"></app-challenges-status>
+  </div>
+</div>

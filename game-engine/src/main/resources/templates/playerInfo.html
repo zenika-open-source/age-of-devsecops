@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--/*@thymesVar id="player" type="com.zenika.ageofdevsecops.domain.player.PlayerInfo"*/-->
+<head>
+    <title th:if="${player != null}" th:text="${player.id}"></title>
+    <title th:if="${player == null}">Oops</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1 th:if="${player != null}" th:text="${'Welcome aboard, team ' + player.id + '!'}"></h1>
+    <h1 th:if="${player == null}">You wish!</h1>
+</div>
+
+<div th:if="${player != null}" class="content">
+    <p>Congratulations! You now have access to the command center of your planet. In your journey to save your people,
+        you will need the following information. Be very careful, it must not fall into the wrong hands, or else you
+        might get hacked and lose control of your planet!</p>
+
+    <table>
+        <tr>
+            <th>Starter Kit</th>
+            <td><a href="http://info.ageofdevsecops.com/pdf/starterkit.pdf">http://info.ageofdevsecops.com/pdf/starterkit.pdf</a></td>
+        </tr>
+        <tr>
+            <th>Team name</th>
+            <td th:text="${player.id}"></td>
+        </tr>
+        <tr>
+            <th>IDE</th>
+            <td><a th:href="${player.cloud9URL}" th:text="${player.cloud9URL}"></a></td>
+        </tr>
+        <tr>
+            <th>Jenkins</th>
+            <td><a th:href="'http://' + ${player.id} + '.ageofdevsecops.com/jenkins'" th:text="'http://' + ${player.id} + '.ageofdevsecops.com/jenkins'"></a></td>
+        </tr>
+        <tr>
+            <th>Sonar</th>
+            <td><a th:href="'http://' + ${player.id} + '.ageofdevsecops.com/sonar'" th:text="'http://' + ${player.id} + '.ageofdevsecops.com/sonar'"></a></td>
+        </tr>
+        <tr>
+            <th>AWS Account ID</th>
+            <td th:text="${player.awsAccountId}"></td>
+        </tr>
+        <tr>
+            <th>Login</th>
+            <td th:text="${player.login + ' (same for all services)'}"></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td th:text="${player.password + ' (same for all services)'}"></td>
+        </tr>
+        <tr>
+            <th>SSH Key</th>
+            <td th:text="${player.sshKey}" style="white-space: pre-line;"></td>
+        </tr>
+    </table>
+
+    <p>Quick, there is a lot of work to do!</p>
+</div>
+<div th:if="${player == null}" class="content">
+    <p>Well tried, but not good enough! This is not a valid team token. Focus on your planet for now, you will get
+        plenty of opportunities to hack around later.</p>
+</div>
+
+<footer></footer>
+
+</body>
+</html>
