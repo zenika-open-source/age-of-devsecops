@@ -17,7 +17,7 @@ Deployment of the game engine is described in [game-engine](game-engine/README.m
 
 Deployment of the score board is described in [score-board](score-board/README.md).
 
-## Score board
+## Quiz system
 
 Deployment of the quiz system is described in [quiz](quiz/README.md).
 
