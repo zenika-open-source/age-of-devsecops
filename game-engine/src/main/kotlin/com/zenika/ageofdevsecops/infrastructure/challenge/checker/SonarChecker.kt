@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.getForObject
 
-@Repository
+//@Repository
 class SonarChecker(private val restTemplate: RestTemplate) {
 
     fun getReport(player: Player): SonarReport {

@@ -17,22 +17,22 @@ class GameController(
     @PostMapping(path = ["/game/pause"])
     fun pauseGame() {
         roundTrigger.pause()
-        instancesAccessManager.denySshAccess()
+//        instancesAccessManager.denySshAccess()
     }
 
     @PostMapping(path = ["/game/resume"])
     fun resumeGame() {
-        instancesAccessManager.permitSshAccess()
+//        instancesAccessManager.permitSshAccess()
         roundTrigger.resume()
     }
 
-    @PostMapping(path = ["/onboarding/pause"])
-    fun pauseOnboarding() {
-        playerManager.disableOnboarding()
-    }
-
-    @PostMapping(path = ["/onboarding/resume"])
-    fun resumeOnboarding() {
-        playerManager.enableOnboarding()
-    }
+//    @PostMapping(path = ["/onboarding/pause"])
+//    fun pauseOnboarding() {
+//        playerManager.disableOnboarding()
+//    }
+//
+//    @PostMapping(path = ["/onboarding/resume"])
+//    fun resumeOnboarding() {
+//        playerManager.enableOnboarding()
+//    }
 }

@@ -6,22 +6,22 @@ import com.zenika.ageofdevsecops.domain.player.PlayerInfoRepository
 class PlayerManager(
         private val playerInfoRepository: PlayerInfoRepository
 ) {
-    private var onboardingEnabled = false
+//    private var onboardingEnabled = false
 
     fun onboardPlayer(token: String): PlayerInfo? {
-        return if (onboardingEnabled) {
-            playerInfoRepository.findByToken(token)
-        } else {
-            null
-        }
+//        return if (onboardingEnabled) {
+        return playerInfoRepository.findByToken(token)
+//        } else {
+//            null
+//        }
         // TODO somewhere here we should add a mechanism to make the player join the game at this point only.
     }
 
     fun disableOnboarding() {
-        onboardingEnabled = false
+//        onboardingEnabled = false
     }
 
     fun enableOnboarding() {
-        onboardingEnabled = true
+//        onboardingEnabled = true
     }
 }

@@ -2,15 +2,14 @@ package com.zenika.ageofdevsecops.infrastructure.challenge.checker
 
 import com.zenika.ageofdevsecops.domain.challenge.FlagStatuses
 import com.zenika.ageofdevsecops.domain.challenge.Player
-import org.slf4j.LoggerFactory
+import com.zenika.ageofdevsecops.domain.flagsubmission.FlagSubmissionRepository
 import org.springframework.stereotype.Component
-import org.springframework.web.client.RestTemplate
-import org.springframework.web.client.getForObject
 
 @Component
 class FlagsChecker(
         flagRepository: FlagRepository,
-        private val restTemplate: RestTemplate
+        val flagSubmissionRepository: FlagSubmissionRepository
+//        private val restTemplate: RestTemplate
 ) {
     private val secretFlagPrefix = "SECRET_"
     private lateinit var publicFlags: Map<String, Flag>
@@ -24,7 +23,8 @@ class FlagsChecker(
 
     fun check(player: Player): FlagStatuses {
         return try {
-            val playerFlags = restTemplate.getForObject<List<String>>("https://${player.main.url}/flags")!!
+            val playerFlags = flagSubmissionRepository.findAllByPlayer(player.id).map { it.flag }
+//            val playerFlags = restTemplate.getForObject<List<String>>("https://${player.main.url}/flags")!!
             val playerPublicFlags = playerFlags.mapNotNull { publicFlags[it] }.distinct()
             val playerSecretFlags = playerFlags.mapNotNull { secretFlags[it] }.distinct()
             val totalDevPoints = playerPublicFlags.map { it.devPoint }.sum() + playerSecretFlags.map { it.devPoint }.sum()

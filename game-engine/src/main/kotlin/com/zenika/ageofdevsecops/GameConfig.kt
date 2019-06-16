@@ -5,16 +5,18 @@ import com.amazonaws.auth.EnvironmentVariableCredentialsProvider
 import com.amazonaws.services.ec2.AmazonEC2
 import com.amazonaws.services.ec2.AmazonEC2ClientBuilder
 import com.google.common.eventbus.EventBus
+import com.zenika.ageofdevsecops.application.FlagManager
 import com.zenika.ageofdevsecops.application.GameEngine
 import com.zenika.ageofdevsecops.application.GameRoundTrigger
 import com.zenika.ageofdevsecops.application.PlayerManager
 import com.zenika.ageofdevsecops.domain.challenge.*
 import com.zenika.ageofdevsecops.domain.challenge.event.DomainEventBus
+import com.zenika.ageofdevsecops.domain.flagsubmission.FlagSubmissionRepository
 import com.zenika.ageofdevsecops.domain.player.PlayerInfoRepository
 import com.zenika.ageofdevsecops.exposition.ChallengesStatusController
 import com.zenika.ageofdevsecops.exposition.ScoreController
 import com.zenika.ageofdevsecops.infrastructure.GuavaEventBus
-import com.zenika.ageofdevsecops.infrastructure.challenge.PlayersFinder
+import com.zenika.ageofdevsecops.infrastructure.challenge.checker.FlagRepository
 import com.zenika.ageofdevsecops.infrastructure.challenge.checker.FlagsChecker
 import com.zenika.ageofdevsecops.infrastructure.challenge.checker.PlayerChallengesCheckerImpl
 import org.apache.http.conn.ssl.NoopHostnameVerifier
@@ -52,6 +54,11 @@ class GameConfig {
     fun playerManager(playerInfoRepository: PlayerInfoRepository): PlayerManager = PlayerManager(playerInfoRepository)
 
     @Bean
+    fun flagManager(playerInfoRepository: PlayerInfoRepository, flagRepository: FlagRepository,
+                    flagSubmissionRepository: FlagSubmissionRepository): FlagManager =
+            FlagManager(playerInfoRepository, flagRepository, flagSubmissionRepository)
+
+    @Bean
     fun reportGrader() = ReportGrader()
 
     @Bean
@@ -79,7 +86,7 @@ class GameConfig {
             @Throws(CertificateException::class)
             override fun isTrusted(x509Certificates: Array<X509Certificate>, s: String): Boolean {
                 val certificate = x509Certificates[0]
-                if(certificate.notAfter.before(Date())) {
+                if (certificate.notAfter.before(Date())) {
                     throw CertificateExpiredException()
                 }
                 return true
@@ -106,11 +113,24 @@ class GameConfig {
     @Bean
     fun credentialProvider(): AWSCredentialsProvider = EnvironmentVariableCredentialsProvider()
 
+//    @Bean
+//    fun players(ec2: AmazonEC2): List<Player> {
+//        val instancesFinder = PlayersFinder(ec2)
+//        instancesFinder.setUp()
+//        return instancesFinder.getPlayers()
+//    }
+
     @Bean
-    fun players(ec2: AmazonEC2): List<Player> {
-        val instancesFinder = PlayersFinder(ec2)
-        instancesFinder.setUp()
-        return instancesFinder.getPlayers()
+    fun players(): List<Player> {
+        val dummyInstance = Instance("", "")
+        val dummySecurityGroup = SecurityGroup("")
+        return listOf(
+                Player("pucara", dummyInstance, dummyInstance, dummyInstance, dummyInstance, dummySecurityGroup, dummySecurityGroup, dummySecurityGroup),
+                Player("dragano", dummyInstance, dummyInstance, dummyInstance, dummyInstance, dummySecurityGroup, dummySecurityGroup, dummySecurityGroup),
+                Player("luuria", dummyInstance, dummyInstance, dummyInstance, dummyInstance, dummySecurityGroup, dummySecurityGroup, dummySecurityGroup),
+                Player("thunides", dummyInstance, dummyInstance, dummyInstance, dummyInstance, dummySecurityGroup, dummySecurityGroup, dummySecurityGroup),
+                Player("ophore", dummyInstance, dummyInstance, dummyInstance, dummyInstance, dummySecurityGroup, dummySecurityGroup, dummySecurityGroup)
+        )
     }
 
     @Bean

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Game Engine (dev)" type="JetRunConfigurationType" factoryName="Kotlin">
-    <module name="com.zenika.game-engine.main" />
+    <module name="game-engine.main" />
     <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />

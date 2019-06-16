@@ -3,7 +3,7 @@ package com.zenika.ageofdevsecops.infrastructure.challenge.checker
 import com.zenika.ageofdevsecops.domain.challenge.Player
 import org.springframework.stereotype.Component
 
-@Component
+//@Component
 class QualityCodeChallengeChecker(private val sonarRepository: SonarChecker) : ChallengeChecker {
 
     override fun check(player: Player): Boolean {

@@ -18,28 +18,28 @@ class GameEngine(
     init {
         val previousScores = scoresFromPreviousRounds()
         val playerScores = emptySet<PlayerScore>().toMutableSet()
-        val playerChallengeStatuses = emptySet<PlayerChallengeStatuses>().toMutableSet()
+//        val playerChallengeStatuses = emptySet<PlayerChallengeStatuses>().toMutableSet()
         players.forEach {
             val initialReport = playerChallengesChecker.onboard(it)
             val reportGrade = reportGrader.grade(initialReport)
             if (previousScores.containsKey(it)) {
                 playerScores.add(previousScores[it]!!)
-                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, previousScores[it]!!.score,
-                        initialReport.challengeStatuses, initialReport.flagStatuses))
+//                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, previousScores[it]!!.score,
+//                        initialReport.challengeStatuses, initialReport.flagStatuses))
             } else {
                 playerScores.add(PlayerScore(it.id, reportGrade.score, reportGrade.score, reportGrade.devPoint, reportGrade.secPoint, reportGrade.opsPoint))
-                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, reportGrade.score,
-                        initialReport.challengeStatuses, initialReport.flagStatuses))
+//                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, reportGrade.score,
+//                        initialReport.challengeStatuses, initialReport.flagStatuses))
             }
         }
         emitScores(playerScores)
-        emitChallengeStatuses(playerChallengeStatuses)
+//        emitChallengeStatuses(playerChallengeStatuses)
     }
 
     fun nextRound() {
         val previousScores = scoresFromPreviousRounds()
         val playerScores = synchronizedSet(emptySet<PlayerScore>().toMutableSet())
-        val playerChallengeStatuses = synchronizedSet(emptySet<PlayerChallengeStatuses>().toMutableSet())
+//        val playerChallengeStatuses = synchronizedSet(emptySet<PlayerChallengeStatuses>().toMutableSet())
         val futures = players.map {
             CompletableFuture.supplyAsync {
                 val report = playerChallengesChecker.check(it)
@@ -48,13 +48,13 @@ class GameEngine(
                 val totalScore = previousScores[it]!!.score + roundScore
                 playerScores.add(PlayerScore(it.id, totalScore, roundScore, Math.max(reportGrade.devPoint, 0),
                         Math.max(reportGrade.secPoint, 0), Math.max(reportGrade.opsPoint, 0)))
-                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, totalScore,
-                        report.challengeStatuses, report.flagStatuses))
+//                playerChallengeStatuses.add(PlayerChallengeStatuses(it.id, totalScore,
+//                        report.challengeStatuses, report.flagStatuses))
             }
         }
         CompletableFuture.allOf(*futures.toTypedArray()).join()
         emitScores(playerScores)
-        emitChallengeStatuses(playerChallengeStatuses)
+//        emitChallengeStatuses(playerChallengeStatuses)
     }
 
     private fun scoresFromPreviousRounds(): Map<Player, PlayerScore> {

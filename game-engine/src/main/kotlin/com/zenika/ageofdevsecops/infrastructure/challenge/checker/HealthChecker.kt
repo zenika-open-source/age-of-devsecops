@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.getForObject
 
-@Component
+//@Component
 class HealthChecker(private val restTemplate: RestTemplate) {
 
     fun verify(ip: String): Status {

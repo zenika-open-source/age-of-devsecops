@@ -10,7 +10,7 @@ import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.exchange
 
-@Component
+//@Component
 class DefaultErrorPageChallengeChecker(private val restTemplate: RestTemplate, private val healthChecker: HealthChecker) : ChallengeChecker {
 
     private val defaultErrorTitle = "<h1>Whitelabel Error Page</h1>"

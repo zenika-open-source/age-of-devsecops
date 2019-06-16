@@ -30,12 +30,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.scoreService.getAll().pipe(takeUntil(this.ngUnsubscribe$)).subscribe(
       playerScores => this.playerScores = playerScores
     );
-    this.challengeStatusService.getAll().pipe(takeUntil(this.ngUnsubscribe$)).subscribe(
-      playerChallengesStatus => this.playerChallengesStatus = playerChallengesStatus
-    );
-    this.interval(15_000, 15_000).pipe(takeUntil(this.ngUnsubscribe$)).subscribe(() => {
-      this.showChallenges = !this.showChallenges;
-    })
+    // this.challengeStatusService.getAll().pipe(takeUntil(this.ngUnsubscribe$)).subscribe(
+    //   playerChallengesStatus => this.playerChallengesStatus = playerChallengesStatus
+    // );
+    // this.interval(15_000, 15_000).pipe(takeUntil(this.ngUnsubscribe$)).subscribe(() => {
+    //   this.showChallenges = !this.showChallenges;
+    // })
   }
 
   ngOnDestroy(): void {

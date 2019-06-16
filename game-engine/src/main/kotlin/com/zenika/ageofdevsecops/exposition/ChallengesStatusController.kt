@@ -13,13 +13,13 @@ class ChallengesStatusController {
 
     private var lastChallengeStatuses: Set<PlayerChallengeStatuses> = emptySet()
 
-    @GetMapping
-    fun fetchChallengesStatus(): Set<PlayerChallengeStatuses> {
-        return lastChallengeStatuses
-    }
-
-    @Subscribe
-    fun handle(playerChallengeStatusesUpdated: PlayerChallengeStatusesUpdated) {
-        lastChallengeStatuses = playerChallengeStatusesUpdated.challengeStatuses
-    }
+//    @GetMapping
+//    fun fetchChallengesStatus(): Set<PlayerChallengeStatuses> {
+//        return lastChallengeStatuses
+//    }
+//
+//    @Subscribe
+//    fun handle(playerChallengeStatusesUpdated: PlayerChallengeStatusesUpdated) {
+//        lastChallengeStatuses = playerChallengeStatusesUpdated.challengeStatuses
+//    }
 }

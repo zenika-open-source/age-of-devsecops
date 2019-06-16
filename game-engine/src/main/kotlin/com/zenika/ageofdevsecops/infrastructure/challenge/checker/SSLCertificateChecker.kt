@@ -12,7 +12,7 @@ import java.time.ZoneId
 import javax.net.ssl.*
 
 
-@Component
+//@Component
 class SSLCertificateChecker: ChallengeChecker {
 
     init {

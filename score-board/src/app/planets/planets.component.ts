@@ -20,150 +20,150 @@ export class PlanetsComponent implements OnInit {
       axialTilt: -0.03626422727142957,
       textureName: 'red1',
     },
-    {
-      name: 'aneitov',
-      rotationSpeed: 0.49234713623319415,
-      axialTilt: -0.18116248351461064,
-      textureName: 'red2',
-    },
-    {
-      name: 'akinez',
-      rotationSpeed: -0.43867164995621394,
-      axialTilt: -0.22121500328951274,
-      textureName: 'red5',
-    },
-    {
-      name: 'dakonus',
-      rotationSpeed: -0.3788718109915625,
-      axialTilt: -0.24834892813394926,
-      textureName: 'red4',
-    },
-    {
-      name: 'piwei',
-      rotationSpeed: 0.31785446609148954,
-      axialTilt: -0.027467180821007187,
-      textureName: 'red3',
-    },
-    {
-      name: 'ogophus',
-      rotationSpeed: -0.2908870596203389,
-      axialTilt: 0.43114138175133815,
-      textureName: 'yellow2',
-    },
-    {
-      name: 'tivilles',
-      rotationSpeed: 0.48742973273834095,
-      axialTilt: -0.3550096771796551,
-      textureName: 'yellow1',
-    },
+    // {
+    //   name: 'aneitov',
+    //   rotationSpeed: 0.49234713623319415,
+    //   axialTilt: -0.18116248351461064,
+    //   textureName: 'red2',
+    // },
+    // {
+    //   name: 'akinez',
+    //   rotationSpeed: -0.43867164995621394,
+    //   axialTilt: -0.22121500328951274,
+    //   textureName: 'red5',
+    // },
+    // {
+    //   name: 'dakonus',
+    //   rotationSpeed: -0.3788718109915625,
+    //   axialTilt: -0.24834892813394926,
+    //   textureName: 'red4',
+    // },
+    // {
+    //   name: 'piwei',
+    //   rotationSpeed: 0.31785446609148954,
+    //   axialTilt: -0.027467180821007187,
+    //   textureName: 'red3',
+    // },
+    // {
+    //   name: 'ogophus',
+    //   rotationSpeed: -0.2908870596203389,
+    //   axialTilt: 0.43114138175133815,
+    //   textureName: 'yellow2',
+    // },
+    // {
+    //   name: 'tivilles',
+    //   rotationSpeed: 0.48742973273834095,
+    //   axialTilt: -0.3550096771796551,
+    //   textureName: 'yellow1',
+    // },
     {
       name: 'thunides',
       rotationSpeed: -0.3240427170641214,
       axialTilt: -0.12736023442379502,
       textureName: 'yellow3',
     },
-    {
-      name: 'kaiphus',
-      rotationSpeed: -0.2727908758556006,
-      axialTilt: -0.17817159344284492,
-      textureName: 'yellow5',
-    },
-    {
-      name: 'kinziri',
-      rotationSpeed: 0.2644741001344519,
-      axialTilt: -0.4081936697732515,
-      textureName: 'yellow4',
-    },
-    {
-      name: 'niborus',
-      rotationSpeed: -0.3412508839644845,
-      axialTilt: 0.3706423958055325,
-      textureName: 'grey5',
-    },
+    // {
+    //   name: 'kaiphus',
+    //   rotationSpeed: -0.2727908758556006,
+    //   axialTilt: -0.17817159344284492,
+    //   textureName: 'yellow5',
+    // },
+    // {
+    //   name: 'kinziri',
+    //   rotationSpeed: 0.2644741001344519,
+    //   axialTilt: -0.4081936697732515,
+    //   textureName: 'yellow4',
+    // },
+    // {
+    //   name: 'niborus',
+    //   rotationSpeed: -0.3412508839644845,
+    //   axialTilt: 0.3706423958055325,
+    //   textureName: 'grey5',
+    // },
     {
       name: 'luuria',
       rotationSpeed: 0.2924641279233148,
       axialTilt: -0.04160167022258197,
       textureName: 'grey1',
     },
-    {
-      name: 'trioteru',
-      rotationSpeed: 0.3389695187689985,
-      axialTilt: -0.43773015649285113,
-      textureName: 'grey2',
-    },
-    {
-      name: 'strooter',
-      rotationSpeed: -0.2515156811666817,
-      axialTilt: -0.3069633258594837,
-      textureName: 'grey3',
-    },
-    {
-      name: 'tesade',
-      rotationSpeed: 0.30944187133161405,
-      axialTilt: -0.3846895864195807,
-      textureName: 'grey4',
-    },
+    // {
+    //   name: 'trioteru',
+    //   rotationSpeed: 0.3389695187689985,
+    //   axialTilt: -0.43773015649285113,
+    //   textureName: 'grey2',
+    // },
+    // {
+    //   name: 'strooter',
+    //   rotationSpeed: -0.2515156811666817,
+    //   axialTilt: -0.3069633258594837,
+    //   textureName: 'grey3',
+    // },
+    // {
+    //   name: 'tesade',
+    //   rotationSpeed: 0.30944187133161405,
+    //   axialTilt: -0.3846895864195807,
+    //   textureName: 'grey4',
+    // },
     {
       name: 'dragano',
       rotationSpeed: -0.3695686428641449,
       axialTilt: -0.4027302234653185,
       textureName: 'blue1',
     },
-    {
-      name: 'azuno',
-      rotationSpeed: 0.30402275618127245,
-      axialTilt: 0.1487478289315501,
-      textureName: 'blue5',
-    },
-    {
-      name: 'carebos',
-      rotationSpeed: 0.4775142841076474,
-      axialTilt: -0.0621675420434841,
-      textureName: 'blue2',
-    },
-    {
-      name: 'obade',
-      rotationSpeed: 0.4080657581718037,
-      axialTilt: 0.46515450061605806,
-      textureName: 'blue3',
-    },
-    {
-      name: 'astriturn',
-      rotationSpeed: -0.4629108801170201,
-      axialTilt: -0.08842668352744716,
-      textureName: 'blue4',
-    },
-    {
-      name: 'zatruna',
-      rotationSpeed: -0.4227526732727597,
-      axialTilt: 0.07118156411144938,
-      textureName: 'green1',
-    },
-    {
-      name: 'votis',
-      rotationSpeed: 0.290385294274052,
-      axialTilt: -0.23268556177063404,
-      textureName: 'green2',
-    },
-    {
-      name: 'xenvion',
-      rotationSpeed: 0.36557440606186115,
-      axialTilt: -0.11235154915524276,
-      textureName: 'green3',
-    },
+    // {
+    //   name: 'azuno',
+    //   rotationSpeed: 0.30402275618127245,
+    //   axialTilt: 0.1487478289315501,
+    //   textureName: 'blue5',
+    // },
+    // {
+    //   name: 'carebos',
+    //   rotationSpeed: 0.4775142841076474,
+    //   axialTilt: -0.0621675420434841,
+    //   textureName: 'blue2',
+    // },
+    // {
+    //   name: 'obade',
+    //   rotationSpeed: 0.4080657581718037,
+    //   axialTilt: 0.46515450061605806,
+    //   textureName: 'blue3',
+    // },
+    // {
+    //   name: 'astriturn',
+    //   rotationSpeed: -0.4629108801170201,
+    //   axialTilt: -0.08842668352744716,
+    //   textureName: 'blue4',
+    // },
+    // {
+    //   name: 'zatruna',
+    //   rotationSpeed: -0.4227526732727597,
+    //   axialTilt: 0.07118156411144938,
+    //   textureName: 'green1',
+    // },
+    // {
+    //   name: 'votis',
+    //   rotationSpeed: 0.290385294274052,
+    //   axialTilt: -0.23268556177063404,
+    //   textureName: 'green2',
+    // },
+    // {
+    //   name: 'xenvion',
+    //   rotationSpeed: 0.36557440606186115,
+    //   axialTilt: -0.11235154915524276,
+    //   textureName: 'green3',
+    // },
     {
       name: 'pucara',
       rotationSpeed: -0.35903715947203885,
       axialTilt: -0.1993774478298711,
       textureName: 'green4',
     },
-    {
-      name: 'estea',
-      rotationSpeed: 0.2885258523557898,
-      axialTilt: 0.3746010756695491,
-      textureName: 'green5',
-    }
+    // {
+    //   name: 'estea',
+    //   rotationSpeed: 0.2885258523557898,
+    //   axialTilt: 0.3746010756695491,
+    //   textureName: 'green5',
+    // }
   ];
 
   private container: HTMLElement;
@@ -280,11 +280,17 @@ export class PlanetsComponent implements OnInit {
   }
 
   private renderPlanets(scene) {
-    for (let i = 0; i < 25; i++) {
-      const planet = this.planets[i];
+    // for (let i = 0; i < 25; i++) {
+    //   const planet = this.planets[i];
+    //
+    //   this.renderPlanet(scene, planet, this.planetDistanceX * (i % 5), this.planetDistanceY * Math.floor(i / 5));
+    // }
 
-      this.renderPlanet(scene, planet, this.planetDistanceX * (i % 5), this.planetDistanceY * Math.floor(i / 5));
-    }
+    this.renderPlanet(scene, this.planets[0], this.planetDistanceX * 1, this.planetDistanceY * 3.4);
+    this.renderPlanet(scene, this.planets[1], this.planetDistanceX * 2.4, this.planetDistanceY * 2.9);
+    this.renderPlanet(scene, this.planets[2], this.planetDistanceX * 0.2, this.planetDistanceY * 2.3);
+    this.renderPlanet(scene, this.planets[3], this.planetDistanceX * 3.7, this.planetDistanceY * 1.7);
+    this.renderPlanet(scene, this.planets[4], this.planetDistanceX * 2.3, this.planetDistanceY * 0.8);
   }
 
   private renderPlanet(scene, planet, x, y) {

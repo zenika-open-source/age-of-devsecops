@@ -6,7 +6,7 @@ import com.zenika.ageofdevsecops.domain.challenge.Player
 import org.springframework.stereotype.Component
 import java.util.concurrent.TimeUnit
 
-@Component
+//@Component
 class LoadBalancerChallengeChecker(
         private val ec2: AmazonEC2,
         private val healthChecker: HealthChecker

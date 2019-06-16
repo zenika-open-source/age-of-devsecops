@@ -4,7 +4,7 @@ import com.zenika.ageofdevsecops.domain.challenge.Player
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 
-@Component
+//@Component
 class HeapDumpChallengeChecker(private val restTemplate: RestTemplate, private val healthChecker: HealthChecker) : ChallengeChecker {
 
     override fun check(player: Player): Boolean {

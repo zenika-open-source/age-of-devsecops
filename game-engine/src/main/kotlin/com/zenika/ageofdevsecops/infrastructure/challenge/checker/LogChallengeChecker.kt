@@ -11,7 +11,7 @@ import org.springframework.web.client.exchange
 import org.springframework.web.client.getForObject
 import java.util.concurrent.TimeUnit
 
-@Component
+//@Component
 class LogChallengeChecker(private val restTemplate: RestTemplate) : ChallengeChecker {
 
     private val expectedResult = "logged"
