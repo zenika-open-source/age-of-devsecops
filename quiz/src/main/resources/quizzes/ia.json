@@ -1,0 +1,232 @@
+  {
+    "id": "",
+    "title": "IA",
+    "description": "",
+    "links": [
+      ""
+    ],
+    "questions": [
+      {
+        "label": "Lequel de ces personnages est considéré comme un des pères fondateurs de l'intelligence artificielle ?",
+        "choices": [
+          {
+            "label": "Tim Berners-Lee",
+            "isCorrect": false
+          },
+          {
+            "label": "Marvin Minsky",
+            "isCorrect": true
+          },
+          {
+            "label": "Larry Page",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quel est le nom du premier ordinateur qui a gagné aux échecs contre un humain ?",
+        "choices": [
+          {
+            "label": "Deep Thought",
+            "isCorrect": false
+          },
+          {
+            "label": "Alpha Zéro",
+            "isCorrect": false
+          },
+          {
+            "label": "Deep Blue",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Quelle est la compléxité du jeu d'échecs (telle qu'elle a été estimé par Claude Shannon dès 1949) ?",
+        "choices": [
+          {
+            "label": "10e120",
+            "isCorrect": true
+          },
+          {
+            "label": "2e120",
+            "isCorrect": true
+          },
+          {
+            "label": "10e1024",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quel est le nom du chatterbot psychanalyste conçu en 1964 ?",
+        "choices": [
+          {
+            "label": "Eliza",
+            "isCorrect": true
+          },
+          {
+            "label": "Alice",
+            "isCorrect": false
+          },
+          {
+            "label": "Alexa",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quelle est la définition de l'apprentissage machine (machine learning) ?",
+        "choices": [
+          {
+            "label": "L'étude de l'automatisation des processus algorithmiques à grande échelle.",
+            "isCorrect": false
+          },
+          {
+            "label": "Donner aux machines la capacité d’apprendre sans être explicitement programmée",
+            "isCorrect": true
+          },
+          {
+            "label": "Un agent rationnel flexible qui perçoit son environnement et réalise des actions maximisant les chances de succès selon un but défini",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Qu'est-ce que c'est le NLP en intelligence artificielle ?",
+        "choices": [
+          {
+            "label": "Neuro-linguistic programming",
+            "isCorrect": false
+          },
+          {
+            "label": "Natural Linguistic Programming",
+            "isCorrect": false
+          },
+          {
+            "label": "Natural Language Processing",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Les intelligences artificielles actuelles (2019) font partie de quelle classe ?",
+        "choices": [
+          {
+            "label": "ANI, Artificial Narrow Intelligence (IA faible)",
+            "isCorrect": true
+          },
+          {
+            "label": "AGI, Artificial General Intelligence (IA forte)",
+            "isCorrect": false
+          },
+          {
+            "label": "ASI, Artificial Super Intelligence",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Pour générer des visages, de la musique, de l'art, on utilise notamment quelle classe d'algorithmes ?",
+        "choices": [
+          {
+            "label": "Réseau de neurones récurrents",
+            "isCorrect": false
+          },
+          {
+            "label": "Algorithmes génétiques",
+            "isCorrect": false
+          },
+          {
+            "label": "Réseaux antagonistes génératifs (GAN)",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Lequel de ces types d'apprentissages peut être appliqué sur des données non-structurées ?",
+        "choices": [
+          {
+            "label": "Renforcé",
+            "isCorrect": false
+          },
+          {
+            "label": "Supervisé",
+            "isCorrect": false
+          },
+          {
+            "label": "Non-supervisé",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "La définition \"prédire une valeur en fonction des données passées\" correspond à",
+        "choices": [
+          {
+            "label": "la regression",
+            "isCorrect": true
+          },
+          {
+            "label": "la classification",
+            "isCorrect": false
+          },
+          {
+            "label": "le clustering",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quel est le projet machine learning open source avec le plus de contributeurs ?",
+        "choices": [
+          {
+            "label": "Scikit-learn",
+            "isCorrect": false
+          },
+          {
+            "label": "SpaCy",
+            "isCorrect": false
+          },
+          {
+            "label": "TensorFlow",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Quel est le langage le plus utilisé pour le machine learning ?",
+        "choices": [
+          {
+            "label": "R",
+            "isCorrect": false
+          },
+          {
+            "label": "Python",
+            "isCorrect": true
+          },
+          {
+            "label": "Scala",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quelle est la formule de la précision ?",
+        "choices": [
+          {
+            "label": "vrais positifs + faux négatifs / total : FP+FN / TP+TN+FN+FP",
+            "isCorrect": false
+          },
+          {
+            "label": "vrais positifs / vrai positifs + faux positifs : TP / (TP + FP)",
+            "isCorrect": true
+          },
+          {
+            "label": "vrais positifs / vrais positifs + faux négatifs : TP / (TP + FN)",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": ""
+  }
