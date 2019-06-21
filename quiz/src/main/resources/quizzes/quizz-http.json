@@ -1,0 +1,285 @@
+  {
+    "id": "",
+    "title": "HTTP",
+    "description": "Connaissances HTTP",
+    "links": [
+      ""
+    ],
+    "questions": [
+      {
+        "label": "Quels sont les verbes HTTP ?",
+        "choices": [
+          {
+            "label": "GET",
+            "isCorrect": true
+          },
+          {
+            "label": "PUT",
+            "isCorrect": true
+          },
+          {
+            "label": "SAVE",
+            "isCorrect": false
+          },
+          {
+            "label": "POST",
+            "isCorrect": true
+          },
+          {
+            "label": "PUSH",
+            "isCorrect": false
+          },
+          {
+            "label": "PATCH",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Quels sont les serveurs HTTP ?",
+        "choices": [
+          {
+            "label": "Apache",
+            "isCorrect": true
+          },
+          {
+            "label": "Postfix",
+            "isCorrect": false
+          },
+          {
+            "label": "nginx",
+            "isCorrect": true
+          },
+          {
+            "label": "PostgreSQL",
+            "isCorrect": false
+          },
+          {
+            "label": "IIS",
+            "isCorrect": true
+          },
+          {
+            "label": "Zope",
+            "isCorrect": true
+          },
+          {
+            "label": "Tomcat",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "HTTP/2 ?",
+        "choices": [
+          {
+            "label": "Il n'est pas compatible avec HTTP 1.1",
+            "isCorrect": false
+          },
+          {
+            "label": "Permet la compression de données des en-têtes HTTP",
+            "isCorrect": true
+          },
+          {
+            "label": "Permet le multiplexage de plusieurs requêtes au travers d’une seule connexion TCP",
+            "isCorrect": true
+          },
+          {
+            "label": "Permet au serveur d’envoyer au client des données nécessaires mais qu’il n’a pourtant pas encore sollicitées",
+            "isCorrect": false
+          },
+          {
+            "label": "Dans la pratique l’usage de TLS pour HTTP/2 est obligatoire",
+            "isCorrect": true
+          },
+          {
+            "label": "La majorité des navigateurs prenaient en charge HTTP/2 dès la fin de l’année 2015",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Un serveur HTTP utilise par défaut le port ?",
+        "choices": [
+          {
+            "label": "8080",
+            "isCorrect": false
+          },
+          {
+            "label": "43",
+            "isCorrect": false
+          },
+          {
+            "label": "88",
+            "isCorrect": false
+          },
+          {
+            "label": "80",
+            "isCorrect": true
+          },
+          {
+            "label": "9000",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Les versions du protocole ?",
+        "choices": [
+          {
+            "label": "HTTP/0.1",
+            "isCorrect": false
+          },
+          {
+            "label": "HTTP/0.9",
+            "isCorrect": true
+          },
+          {
+            "label": "HTTP/1.0",
+            "isCorrect": true
+          },
+          {
+            "label": "HTTP/1.1",
+            "isCorrect": true
+          },
+          {
+            "label": "HTTP/1.2",
+            "isCorrect": false
+          },
+          {
+            "label": "HTTP/2.0",
+            "isCorrect": true
+          },
+          {
+            "label": "HTTP/2.1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Méthodes définies par la spécification RFC 26171 (HTTP Authentication) ?",
+        "choices": [
+          {
+            "label": "Basic",
+            "isCorrect": true
+          },
+          {
+            "label": "Ldap",
+            "isCorrect": false
+          },
+          {
+            "label": "Digest",
+            "isCorrect": true
+          },
+          {
+            "label": "SHA",
+            "isCorrect": false
+          },
+          {
+            "label": "SSH",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Codes HTTP et leur message ?",
+        "choices": [
+          {
+            "label": "200 : OK",
+            "isCorrect": true
+          },
+          {
+            "label": "400 : Unauthorized",
+            "isCorrect": false
+          },
+          {
+            "label": "403 : Not Found",
+            "isCorrect": false
+          },
+          {
+            "label": "301 : Moved Permanently",
+            "isCorrect": true
+          },
+          {
+            "label": "404 : Forbidden",
+            "isCorrect": false
+          },
+          {
+            "label": "418 : I’m a teapot",
+            "isCorrect": true
+          },
+          {
+            "label": "201 : Created",
+            "isCorrect": true
+          },
+          {
+            "label": "401 : Bad Request",
+            "isCorrect": false
+          },
+          {
+            "label": "501 : Internal Server Error",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Que veut dire HTTP ?",
+        "choices": [
+          {
+            "label": "Hyper Transfer Text Protocol",
+            "isCorrect": false
+          },
+          {
+            "label": "Hypertext Transfer Protocol",
+            "isCorrect": true
+          },
+          {
+            "label": "Hype Textile Tournament Protobuf",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Que a crée HTTP ?",
+        "choices": [
+          {
+            "label": "Linus Torvalds",
+            "isCorrect": false
+          },
+          {
+            "label": "Tim Berners-Lee",
+            "isCorrect": true
+          },
+          {
+            "label": "Richard Stallman",
+            "isCorrect": false
+          },
+          {
+            "label": "Denis Ritchie",
+            "isCorrect": false
+          },
+          {
+            "label": "Bill Gates",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Sur quel protocole HTTP s'appuie ?",
+        "choices": [
+          {
+            "label": "UDP",
+            "isCorrect": false
+          },
+          {
+            "label": "TCP/IP",
+            "isCorrect": true
+          },
+          {
+            "label": "FTP",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": ""
+  }
