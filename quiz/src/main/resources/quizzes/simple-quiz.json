@@ -1,0 +1,32 @@
+  {
+    "id": "",
+    "title": "",
+    "description": "",
+    "links": [
+      ""
+    ],
+    "questions": [
+      {
+        "label": "",
+        "choices": [
+          {
+            "label": "",
+            "isCorrect": false
+          },
+          {
+            "label": "",
+            "isCorrect": true
+          },
+          {
+            "label": "",
+            "isCorrect": false
+          },
+          {
+            "label": "",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": ""
+  }
