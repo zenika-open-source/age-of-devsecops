@@ -1,0 +1,188 @@
+  {
+    "id": "",
+    "title": "Zenika",
+    "description": "Pouvez-vous obtenir ses informations \"sensibles\" sur zenika ?",
+    "links": [
+    ],
+    "questions": [
+      {
+        "label": "Le mot de passe du wifi de zenika est :",
+        "choices": [
+          {
+            "label": "Welcome2Zenika",
+            "isCorrect": true
+          },
+          {
+            "label": "ZestPasMoiZestLautre",
+            "isCorrect": false
+          },
+          {
+            "label": "UnMotDePasseSansZdedansCestBienAussi",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "La date de naissance du directeur du Zenika Labs est le",
+        "choices": [
+          {
+            "label": "9 juin 1987",
+            "isCorrect": false
+          },
+          {
+            "label": "19 août 1991",
+            "isCorrect": true
+          },
+          {
+            "label": "28 février 1991",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Le numéro de téléphone direct de la responsable de recrutement Paris est :",
+        "choices": [
+          {
+            "label": "0182289856",
+            "isCorrect": true
+          },
+          {
+            "label": "0188122188",
+            "isCorrect": false
+          },
+          {
+            "label": "0115337639",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "La directrice du service marketing de Zenika s'appelle :",
+        "choices": [
+          {
+            "label": "Débora Poirier",
+            "isCorrect": false
+          },
+          {
+            "label": "Cythia Staebler",
+            "isCorrect": false
+          },
+          {
+            "label": "Julia Lehoux",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "La première adresse de Zenika est",
+        "choices": [
+          {
+            "label": "28 RUE DE CHATEAUDUN - 75009 PARIS",
+            "isCorrect": false
+          },
+          {
+            "label": "22 RUE D ANNAM - 75020 PARIS",
+            "isCorrect": true
+          },
+          {
+            "label": "51 RUE LE PELETIER - 75009 PARIS ",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Le nom de domaine de zenika est gèré par",
+        "choices": [
+          {
+            "label": "OVH",
+            "isCorrect": false
+          },
+          {
+            "label": "1&1",
+            "isCorrect": false
+          },
+          {
+            "label": "Gandi",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Le certificat SSL du site zenika.com expire le",
+        "choices": [
+          {
+            "label": "24 mai 2020",
+            "isCorrect": false
+          },
+          {
+            "label": "1er janvier 2020",
+            "isCorrect": false
+          },
+          {
+            "label": "1er décembre 2019",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Zenika est localisé à",
+        "choices": [
+          {
+            "label": "Lyon",
+            "isCorrect": true
+          },
+          {
+            "label": "Grenoble",
+            "isCorrect": true
+          },
+          {
+            "label": "Bayonne",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Zenika a été crée en",
+        "choices": [
+          {
+            "label": "2005",
+            "isCorrect": false
+          },
+          {
+            "label": "2006",
+            "isCorrect": true
+          },
+          {
+            "label": "2007",
+            "isCorrect": false
+          },
+          {
+            "label": "2008",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Le surnom du logo de zenika est",
+        "choices": [
+          {
+            "label": "La lune",
+            "isCorrect": true
+          },
+          {
+            "label": "Le rond",
+            "isCorrect": false
+          },
+          {
+            "label": "Le carré",
+            "isCorrect": false
+          },
+          {
+            "label": "Le ziguigui",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "successMessage": ""
+  }
