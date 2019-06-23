@@ -168,8 +168,8 @@ jobs:
       - run:
           name: Deploy on remote machine
           command: |
-            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-game-engine.yml ubuntu@scoreboard.ageofdevsecops.com:~
-            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@scoreboard.ageofdevsecops.com " \
+            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-game-engine.yml ubuntu@codingtheuniverse.zenikalabs.com:~
+            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@codingtheuniverse.zenikalabs.com " \
                 export CIRCLE_WORKFLOW_ID=${CIRCLE_WORKFLOW_ID}
                 export DATASOURCE_URL=${DATASOURCE_URL}
                 export DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
@@ -194,8 +194,8 @@ jobs:
       - run:
           name: Deploy on remote machine
           command: |
-            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-quiz.yml ubuntu@quiz.ageofdevsecops.com:~
-            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@quiz.ageofdevsecops.com " \
+            scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no docker-compose-quiz.yml ubuntu@quiz.codingtheuniverse.zenikalabs.com:~
+            ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@quiz.codingtheuniverse.zenikalabs.com " \
                 export CIRCLE_WORKFLOW_ID=${CIRCLE_WORKFLOW_ID}
                 sudo --preserve-env docker-compose -f docker-compose-quiz.yml pull \
                 && sudo --preserve-env docker-compose -p quiz -f docker-compose-quiz.yml up -d --force-recreate \

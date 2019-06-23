@@ -4,8 +4,8 @@
     "title": "Security in CI/CD",
     "description": "This is to test your knowledge about security in CI/CD. If you succeed, you will get a bonus flag worth 1 point of Dev, 1 point of Sec and 2 points of Ops. If you're afraid, go check out these nice presentations beforehand... Good luck!",
     "links": [
-      "https://info.ageofdevsecops.com/pdf/zenbox-secdevops.pdf",
-      "https://info.ageofdevsecops.com/pdf/shifting-security-to-the-left.pdf"
+      "https://info.codingtheuniverse.zenikalabs.com/pdf/zenbox-secdevops.pdf",
+      "https://info.codingtheuniverse.zenikalabs.com/pdf/shifting-security-to-the-left.pdf"
     ],
     "questions": [
       {
@@ -447,7 +447,7 @@
     "links": [
       "https://docs.docker.com/get-started/",
       "https://www.youtube.com/watch?v=Q5POuMHxW-0",
-      "https://info.ageofdevsecops.com/pdf/docker101.pdf"
+      "https://info.codingtheuniverse.zenikalabs.com/pdf/docker101.pdf"
     ],
     "questions": [
       {
