@@ -3694,5 +3694,220 @@
       }
     ],
     "successMessage": "Congratulations! Here is your flag: QUIZ_DATEFORMAT_DEV1_SEC0_OPS0_999j4ktks7w5qq7qtg3w7gi3n52767rc529i52efss43y72r"
+  },
+  {
+    "id": "TODO: TO_BE_GENERATED",
+    "title": "Green IT",
+    "description": "Êtes-vous conscient de l'impact écologique du numérique ? Êtes-vous prêt à relever le défis ?",
+    "links": [],
+    "questions": [
+      {
+        "label": "Parmis ces objets du quotidien, lesquels émettent plus de CO2 pendant leur phase d’usage que pendant leur phase d’extraction de matières premières ?",
+        "choices": [
+          {
+            "label": "Smartphone",
+            "isCorrect": false
+          },
+          {
+            "label": "Gazinière",
+            "isCorrect": true
+          },
+          {
+            "label": "Ordinateur portable",
+            "isCorrect": false
+          },
+          {
+            "label": "Tablette",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "L’analyse du cycle de vie :",
+        "choices": [
+          {
+            "label": "Est une méthode d'évaluation normalisée (ISO 14040 et ISO 14044)",
+            "isCorrect": true
+          },
+          {
+            "label": "Permet de quantifier uniquement l'impact carbone du système étudié",
+            "isCorrect": false
+          },
+          {
+            "label": "Porte sur l'analyse de sa fabrication",
+            "isCorrect": false
+          },
+          {
+            "label": "Porte sur l'ensemble de la vie du système étudié : de sa fabrication à sa destruction/recyclage",
+            "isCorrect": true
+          },
+          {
+            "label": "Permet de dégager des pistes d'éco-conception dans un but d'amélioration du système étudié",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Quels sont les principaux intérêts d'une éco-conception de logiciel ?",
+        "choices": [
+          {
+            "label": "Avoir un logiciel mieux conçu",
+            "isCorrect": true
+          },
+          {
+            "label": "Avoir un logiciel moins cher",
+            "isCorrect": false
+          },
+          {
+            "label": "Avoir un logiciel moins énergivore",
+            "isCorrect": true
+          },
+          {
+            "label": "Avoir un logiciel accessible pour le plus grand nombre",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "label": "Selon vous, un épisode de GOT regardé en streaming par 10 millions d’utilisateurs représente :",
+        "choices": [
+          {
+            "label": "3 kg equivalent CO2 émis",
+            "isCorrect": true
+          },
+          {
+            "label": "3 tonnes de equivalent C02 émis",
+            "isCorrect": false
+          },
+          {
+            "label": "20 minutes de vol d'un avion",
+            "isCorrect": true
+          },
+          {
+            "label": "20 heures de vol d'un avion",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Un email de 1Mo représente 275g d'équivalent CO2 par envoi. Quel est le pourcentage de spam:",
+        "choices": [
+          {
+            "label": "65%",
+            "isCorrect": false
+          },
+          {
+            "label": "75%",
+            "isCorrect": false
+          },
+          {
+            "label": "85%",
+            "isCorrect": true
+          },
+          {
+            "label": "95%",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "AlphaGo Zero est un algorithme de Deep Learning conçu par Google pour jouer au jeu du GO. 40 jours de fonctionnement de cet algorithme représentent :",
+        "choices": [
+          {
+            "label": "10h de vol d'un avion",
+            "isCorrect": false
+          },
+          {
+            "label": "100h de vol d'un avion",
+            "isCorrect": false
+          },
+          {
+            "label": "1000h de vol d'un avion",
+            "isCorrect": true
+          },
+          {
+            "label": "10000h de vol d'un avion",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Un recherche Google consomme autant que :",
+        "choices": [
+          {
+            "label": "Un corps humain au repos pendant 10 secondes",
+            "isCorrect": true
+          },
+          {
+            "label": "Une ampoule de 60W allumée pendant 12 minutes",
+            "isCorrect": true
+          },
+          {
+            "label": "Une voiture à essence qui roule pendant 1 km",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Je consomme autant que 9 foyers américains pendant 1 journée, je suis :",
+        "choices": [
+          {
+            "label": "Le nouvel iphone",
+            "isCorrect": false
+          },
+          {
+            "label": "Le bitcoin",
+            "isCorrect": true
+          },
+          {
+            "label": "Watson, le super-calculateur d'IBM",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Classez les différentes propositions suivantes par ordre décroissant d’émission de CO2 ",
+        "choices": [
+          {
+            "label": "Informatique, Chine, USA, Inde",
+            "isCorrect": false
+          },
+          {
+            "label": "Chine, Informatique, USA, Inde",
+            "isCorrect": false
+          },
+          {
+            "label": "Chine, USA, Informatique, Inde",
+            "isCorrect": true
+          },
+          {
+            "label": "Chine, USA, Inde, Informatique",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "label": "Quelle source d’énergie émet au maximum 60 g CO2 EQ par KWh produit ?",
+        "choices": [
+          {
+            "label": "Les éoliennes",
+            "isCorrect": true
+          },
+          {
+            "label": "Les centrales thermiques",
+            "isCorrect": false
+          },
+          {
+            "label": "Les centrales nucléaires",
+            "isCorrect": true
+          },
+          {
+            "label": "Les barrages hydrauliques",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
+    "successMessage": "Félicitations, voici votre flag: TODO: TO_BE_GENERATED"
   }
 ]
