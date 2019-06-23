@@ -9,32 +9,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="header">
     <h1 th:if="${player != null}" th:text="${'Welcome aboard, team ' + player.id + '!'}"></h1>
     <h1 th:if="${player == null}">You wish!</h1>
+    <div class="strike"></div>
 </div>
 
 <div th:if="${player != null}" class="content">
-    <p>Félicitations ! Vous avez maintenant accès au centre de contrôle de votre planète. Au cours de votre mission pour
-        sauver les votres, vous allez avoir besoin des informations suivantes. Mais faites bien attention : elles ne
-        doivent pas tomber entre de mauvaises mains...</p>
+    <h2 th:text="${'Team ' + player.id}"></h2>
+    <p>Félicitations ! Vous avez maintenant accès au centre de contrôle de votre planète. Vite, il y a beaucoup de
+        travail qui vous attend ! Utilisez le champ ci-dessous pour envoyer les flags que vous gagnerez au cours de
+        votre aventure.</p>
 
-    <p>Vite vite, il y a beaucoup de travail qui vous attend ! Utilisez le champs ci-dessous pour envoyer les flags que
-        vous trouverez en chemin.</p>
+    <form action="#" th:action="@{/players/{token}(token=${player.token})}" th:object="${flagSubmissionModel}"
+          method="post">
 
-    <form action="#" th:action="@{/players/{token}(token=${player.token})}" th:object="${flagSubmissionModel}" method="post">
-
-        <input type="text" th:field="*{submittedFlag}"/>
+        <input type="text" th:field="*{submittedFlag}" placeholder="Entrez un flag"/>
 
         <div class="result" th:if="${result!=null}">
             <h3 th:text="${result}"></h3>
         </div>
 
         <div class="submit-container">
-            <button type="submit" name="Submit">Submit</button>
+            <button type="submit" name="Submit">Envoyer</button>
         </div>
 
     </form>

@@ -22,7 +22,7 @@
 
     <tbody>
     <tr *ngFor="let playerScore of playerScores; let i = index" class="row">
-      <td>{{ i + 1 }}.</td>
+      <td class="rank">{{ i + 1 }}.</td>
       <td>{{ toSnakeCase(playerScore.playerId) }}</td>
       <td class="flex">
         <div class="score">{{ playerScore.score }}</div>

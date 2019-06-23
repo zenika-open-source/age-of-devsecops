@@ -217,7 +217,8 @@ export class PlanetsComponent implements OnInit {
       const fontLoader = new this.THREE.FontLoader(loadingManager);
       const textureLoader = new this.THREE.TextureLoader(loadingManager);
 
-      fontLoader.load('assets/fonts/ZCOOL_QingKe_HuangYou_Regular.json', result => this.font = result);
+      // fontLoader.load('assets/fonts/ZCOOL_QingKe_HuangYou_Regular.json', result => this.font = result);
+      fontLoader.load('assets/fonts/Retron2000_Regular.json', result => this.font = result);
       this.planets.forEach(planet => {
 
         textureLoader.load(`assets/images/planets/${planet.textureName}.jpg`, result => {
