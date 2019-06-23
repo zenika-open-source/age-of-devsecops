@@ -18,9 +18,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(ellipse at center, rgba(22, 61, 134, 0.9) 0%, rgba(22, 4, 26, 0.8) 60%, rgb(6, 0, 31) 90%), url("../images/bg.jpg");
+    background: url("../images/bg.jpg");
     background-size: cover;
-    background-blend-mode: luminosity;
 }
 
 .header {

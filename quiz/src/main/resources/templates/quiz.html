@@ -8,12 +8,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="header">
     <h1 th:text="${quiz.title}"></h1>
+    <div class="strike"></div>
 </div>
 
 <form action="#" th:action="@{/quizzes/{id}(id=${quiz.id})}" th:object="${responseSheet}" method="post">
@@ -43,11 +45,10 @@
                            th:text="${choice}"></label>
                 </li>
             </ul>
-            <hr/>
+            <img class="separator" src="/images/separator.svg" alt="">
         </th:block>
 
         <div class="result" th:if="${result!=null}">
-            <h2>Result</h2>
             <h3 th:text="${result}"></h3>
         </div>
 

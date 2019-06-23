@@ -8,7 +8,7 @@ class QuizChecker(private val quizRepository: QuizRepository) {
         val quiz = quizRepository.get(responseSheet.quizId)
         val grade = quiz.grade(responseSheet)
         return if (grade < 1.0) {
-            "Try again!"
+            "C'est pas bon ! Essaie encore..."
         } else {
             quiz.successMessage
         }
