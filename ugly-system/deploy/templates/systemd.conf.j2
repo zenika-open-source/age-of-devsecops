@@ -1,0 +1,12 @@
+[Unit]
+Description=spring-boot-ansible
+After=syslog.target
+
+[Service]
+User=spring-boot-ansible
+Group=spring-boot-ansible
+ExecStart=/usr/bin/java -jar /home/spring-boot-ansible/spring-boot-ansible.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
