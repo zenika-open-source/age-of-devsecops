@@ -1,0 +1,56 @@
+- name: deploys the application
+  hosts: all
+  remote_user: ubuntu
+  vars:
+    timestamp: ""
+
+  tasks:
+  - name: "install java"
+    sudo: yes
+    apt:
+      name: openjdk-8-jdk
+      update_cache: yes
+
+
+  - name: "create spring-boot-ansible group"
+    sudo: yes
+    group:
+      name: spring-boot-ansible
+
+  - name: "create spring-boot-ansible user"
+    sudo: yes
+    user:
+      name: spring-boot-ansible
+      group: spring-boot-ansible
+      comment: "user for application spring-boot-ansible"
+
+  - name: "copy the jar artifact"
+    sudo: yes
+    copy: src=../target/app.jar dest=/home/spring-boot-ansible/spring-boot-ansible.jar force=True
+
+  - name: "set the jar artifact file permissions"
+    sudo: yes
+    file: path=/home/spring-boot-ansible/spring-boot-ansible.jar owner=spring-boot-ansible group=spring-boot-ansible mode=0755
+
+  - name: "create systemd unit configuration"
+    sudo: yes
+    template:
+      src: systemd.conf.j2
+      dest: /etc/systemd/system/spring-boot-ansible.service
+
+  - name: "reload systemd"
+    sudo: yes
+    systemd:
+      daemon_reload: yes
+
+  - name: "enable the service"
+    sudo: yes
+    systemd:
+      name: spring-boot-ansible
+      enabled: yes
+
+  - name: "start the service"
+    sudo: yes
+    systemd:
+      name: spring-boot-ansible
+      state: restarted
